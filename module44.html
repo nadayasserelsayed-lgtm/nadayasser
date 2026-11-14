@@ -341,69 +341,57 @@ Nada Yasser
 
 </h2>
 
-<div class="content-box">
 
-<br><br>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div style="
-  width: 100%;
-  min-height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 20px;
-">
+<div class="pdf-container">
 
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background: #f1f3f5;
-            font-family: Arial, sans-serif;
-        }
+    <a class="pdf-link"
+       href="assets/pdf/الموديول%20الرابع.pdf"
+       target="_blank">
+       📄 فتح ملف الموديول الرابع
+    </a>
 
-        h1 {
-            text-align: center;
-            color: #234568;
-            margin-bottom: 25px;
-        }
-
-        .pdf-container {
-            width: 100%;
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            padding: 10px;
-            box-shadow: 0 2px 10px #ccc;
-            border-radius: 8px;
-        }
-
-        .pdf-container iframe {
-            width: 100%;
-            height: 2180vh;
-            border: none;
-        }
-    </style>
-</head>
-
-<body>
-
-
-    <div class="pdf-container">
-        <iframe
-            src="assets/pdf/الموديول الرابع.pdf #toolbar=0&navpanes=0&view=FitH"
-            title="الموديول الرابع">
-        </iframe>
-    </div>
-
-    </div>
-
-  </div>
-
-  </div>
+    <iframe
+       src="assets/pdf/الموديول%20الرابع.pdf"
+       width="100%"
+       height="750px"
+       style="border: none;">
+    </iframe>
 </div>
+
+<style>
+.pdf-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.pdf-link {
+    display: block;
+    text-align: center;
+    background: #176b87;
+    color: white;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+iframe {
+    width: 100%;
+    min-height: 25000px;
+}
+
+@media (max-width: 600px) {
+    iframe {
+            height: 2180vh;
+    }
+}
+</style>
 
 </div>
 
