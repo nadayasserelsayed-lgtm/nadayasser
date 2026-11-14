@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" >
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول السادس</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+
+
+
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .feedback { margin-top:12px; padding:12px 14px; border-radius:10px; }
+  .correct { background:#e9f8ee; border:1px solid #9bd4ad; }
+  .incorrect { background:#fff0f0; border:1px solid #efb2b2; }
+  .unanswered { background:#fff8e7; border:1px solid #eed38a; }
+  .answer-line { font-weight:bold; margin-top:4px; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+<style>
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول السادس
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+تقويم الرسومات الرقمية التعليمية
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+الهدف العام
+
+</h2>
+
+<p>
+
+إلمام طالب تكنولوجيا التعليم بمهارات تقويم الرسومات الرقمية التعليمية </p>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+الأهداف الإجرائية
+
+</h2>
+
+<ul class="objectives">
+<p>
+
+في نهاية دراسة الموديول يجب أن يكون الطالب قادراً على أن:</p>
+<li>يفحص تراخيص الرسومات المستخدمة والعناصر.</li><li>يفحص احترام حقوق الملكية الفكرية من خلال الإشارة إلى المؤلف الأصلي في حالة الاقتباس.</li>
+<li>يقيّم الحفاظ على الخصوصية في الرسومات الرقمية التعليمية المنتجة.</li><li>يحكم على مدى توافق الرسومات الرقمية التعليمية مع المعايير الأخلاقية ومعايير السلامة.</li>
+<li>يربط مدى توافق المحتوى بالمعايير المهنية وعدم التحيز.</li><li>يقيّم الدقة العلمية من خلال التأكد من صحة المعلومات والبيانات.</li>
+<li>يقيّم جودة الرسومات الرقمية التعليمية المنتجة.</li><li>يقيّم وضوح الرسالة في الرسومات الرقمية التعليمية.</li>
+<li>يقيّم الجاذبية البصرية من خلال استخدام الألوان والتنسيقات بشكل متوازن.</li><li>يقيّم تنظيم العناصر في الرسومات الرقمية التعليمية.</li>
+<li>يقيّم البساطة من خلال تجنب التعقيد غير الضروري.</li><li>يقيّم مدى ملاءمة الرسومات الرقمية التعليمية للفئة المستهدفة.</li>
+<li>يحكم على مدى تحقق الأهداف التعليمية من خلال الرسومات الرقمية التعليمية المنتجة.</li><li>يطوّر ويعدّل تصميم الرسومات الرقمية التعليمية بما يتوافق مع تحقيق الأهداف التعليمية المرجوة.</li>
+<li>يقترح التحسينات لتحديد جوانب القوة والضعف المطلوب تحسينها في الرسومات الرقمية التعليمية.</li><li>يعتمد المنتج النهائي.</li>
+<li>يوثّق النتائج.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>
+محتوى الموديول السادس
+
+</h2>
+
+<div class="content-box">
+
+<br><br>
+
+<div style="
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f1f3f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #234568;
+            margin-bottom: 25px;
+        }
+
+        .pdf-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 2px 10px #ccc;
+            border-radius: 8px;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 1500vh;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="pdf-container">
+        <iframe
+            src="assets/pdf/الموديول السادس.pdf #toolbar=0&navpanes=0&view=FitH"
+            title="الموديول السادس">
+        </iframe>
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<br><br>
+
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+النشاط
+</h2>
+<p>
+
+عزيزي الدارس / عزيزتي الدارسة، <br> أجب عن السؤال التالي: وضح مهارات تقويم الرسومات الرقمية التعليمية  ثم أرسله عبر مجموعة الواتس</p>
+
+<a href="https://wa.me/" target="_blank" class="whatsapp-btn">
+  📱 whatsapp
+</a>
+
+</div>
+
+<div class="buttons">
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+<a href="module666.html" class="button">
+
+➡️ الإختبار البعدي للموديول السادس
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

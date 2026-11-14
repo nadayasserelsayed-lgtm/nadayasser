@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول الثالث</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .module-access { margin-top:18px; padding:16px; border-radius:12px; background:#f4f7fb; border:1px solid var(--border); }
+  .module-button { display:inline-block; text-decoration:none; margin-top:8px; background:#17834a; color:#fff; }
+  .module-button:disabled { background:#aab3c1; color:#f7f8fa; cursor:not-allowed; opacity:.85; }
+  .status-pass { color:#17834a; font-weight:bold; }
+  .status-fail { color:#b42318; font-weight:bold; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول الثالث
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+أساسيات عن الذكاء الاصطناعي
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+    <h2 style="text-align: right; direction: rtl; margin: 0;">
+
+تعليمات الاختبار البعدي للموديول الثالث
+</h2>
+
+<ul class="objectives">
+        <li> عزيزي الدارس / عزيزتي الدارسة ، يُرجى قراءة التعليمات التالية جيدًا قبل البدء في الإجابة عن أسئلة الاختبار:</li>
+
+<li>   يهدف هذا الاختبار إلى تحديد ما تعلمته خلال دراسة محتوى الموديول.
+</li>
+
+<li> يتكون الاختبار من 12 سؤالًا موزعة على قسمين:<br>
+   - القسم الأول: 4 سؤالًا من نوع الصواب والخطأ.
+  <br> - القسم الثاني: 8 سؤالًا من نوع الاختيار من متعدد.</li>
+
+<li>تُخصص درجة واحدة لكل سؤال، بإجمالي 12 درجة للاختبار كاملًا.</li>
+
+<li>اقرأ كل سؤال بعناية، وتأكد من فهم المطلوب قبل اختيار الإجابة.
+</li>
+
+<li>لا تتسرع في الإجابة، وخذ الوقت الكافي لقراءة السؤال والبدائل.
+</li>
+
+<li>اختار إجابة واحدة فقط من بين البدائل المتاحة لكل سؤال.
+</li>
+
+<li>أجب عن جميع الأسئلة بالترتيب، مع مراعاة الدقة والتركيز.
+</li>
+
+ <li>تأكد من الإجابة عن جميع الأسئلة، وعدم ترك أي سؤال دون إجابة.</li>
+ <li>راجع إجاباتك جيدًا قبل إنهاء الاختبار.</li>
+
+<li>اعتمد على معلوماتك وما تم دراسته في الموديلولات التعليمية في الإجابة، دون الاستعانة بمصادر خارجية.
+</li>
+
+<li>بعد الانتهاء من الإجابة عن جميع الأسئلة، راجع إجاباتك ثم اضغط على زر إرسال الإجابات.
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h1>عزيزي الدارس/ عزيزتي الدارسة، أجب عن الأسئلة التالية:</h1>
+
+<body>
+
+
+
+
+<style >
+:root{--ink:#172033;--muted:#667085;--line:#dce3ee;--brand:#2457a7;--soft:#f4f7fb;--good:#137547;--bad:#b42318}
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+main{max-width:980px;margin:18px auto;padding:18px}
+header{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:14px}
+h1{font-size:1.35rem;margin:0 0 6px}header p{margin:0;color:var(--muted)}
+.progress{height:7px;background:#e6ebf3;border-radius:9px;overflow:hidden;margin-top:14px}.bar{height:100%;width:0;background:var(--brand);transition:width .2s}
+#quiz{display:grid;gap:12px}.q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}.q h2{font-size:1rem;margin:0 0 12px}.num{color:var(--brand);font-weight:bold}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+label.opt{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);padding:10px 12px;border-radius:10px;cursor:pointer;background:#fff}
+label.opt:has(input:checked){border-color:var(--brand);background:#f0f5ff}
+input{margin-top:7px;accent-color:var(--brand)}
+.feedback{display:none;margin-top:10px;border-radius:9px;padding:9px 12px;font-size:.95rem}
+.feedback.good{display:block;background:#eaf7ef;color:var(--good)}.feedback.bad{display:block;background:#fff0ef;color:var(--bad)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+button{border:0;border-radius:10px;padding:12px 18px;font:inherit;font-weight:bold;cursor:pointer}
+#submit{background:var(--brand);color:#fff}#reset{background:#e3e8f0;color:var(--ink)}
+#result{display:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+#module4{background:var(--good);color:#fff}#module4:disabled{background:#c8ced8;color:#596273;cursor:not-allowed}
+#score{font-size:1.5rem;font-weight:bold;color:var(--brand)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin:20px}
+@media(max-width:620px){main{padding:10px}.options{grid-template-columns:1fr}.q{padding:13px}header{padding:16px}}
+@media print{body{background:white}main{max-width:none;margin:0;padding:0}.actions,footer{display:none}.q,header,#result{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+
+<body>
+  
+<main>
+
+  
+  
+  <main>
+<form id="quiz"><div id="questions"></div>
+<div class="actions"><button id="submit" type="submit">إنهاء الاختبار وعرض النتيجة</button></div>
+</form><section id="result" aria-live="polite"><div id="score"></div><p id="message"></p><button id="module4" type="button" disabled>الانتقال إلى الموديول الرابع</button></section>
+</main>
+<script >
+const questions=[
+{type:'tf',text:'الذكاء الاصطناعي يعني قدرة الحاسوب على التفكير مثل الإنسان.',opts:['صحيحة','خاطئة'],answer:0},
+{type:'tf',text:'لا توجد أي تحديات في استخدام الذكاء الاصطناعي.',opts:['صحيحة','خاطئة'],answer:1},
+{type:'tf',text:'ينقسم الذكاء الاصطناعي التوليدي إلى أنواع مثل الضيق والعام والفائق.',opts:['صحيحة','خاطئة'],answer:0},
+{type:'tf',text:'الرسومات المنتجة بالذكاء الاصطناعي أقل مرونة من التقليدية.',opts:['صحيحة','خاطئة'],answer:0},
+{type:'mc',text:'الذكاء الاصطناعي هو…',opts:['أ) ذكاء بشري فقط','ب) قدرة الأنظمة على محاكاة الذكاء البشري','ج) رسومات يدوية','د) برامج نصية فقط'],answer:1},
+{type:'mc',text:'من مزايا الذكاء الاصطناعي…',opts:['أ) تعطيل الأنظمة','ب) تقليل الإنتاج','ج) تحسين الكفاءة ودقة الأداء','د) زيادة الوقت'],answer:2},
+{type:'mc',text:'إحدى تحديات الذكاء الاصطناعي…',opts:['أ) ارتفاع التكلفة والحاجة للتطوير المستمر','ب) سهولة الاستخدام دائمًا','ج) عدم الحاجة للبرمجة','د) انخفاض البيانات'],answer:0},
+{type:'mc',text:'الذكاء الاصطناعي التوليدي هو…',opts:['أ) نظام يخزن الملفات فقط','ب) نظام ينشئ محتوى جديدًا مثل الصور والنصوص','ج) برنامج عرض فقط','د) جهاز إدخال بيانات'],answer:1},
+{type:'mc',text:'أي مما يلي من أنواع الذكاء الاصطناعي التوليدي؟',opts:['أ) الثابت والمتغير','ب) الفردي والجماعي فقط','ج) الورقي والإلكتروني','د) الضيق والعام والفائق'],answer:3},
+{type:'mc',text:'من تطبيقات الذكاء الاصطناعي في إنتاج الرسومات الرقمية التعليمية…',opts:['أ) Pictory','ب) Pike','ج) Canva','د) CapCut'],answer:2},
+{type:'mc',text:'من أنواع الرسومات الرقمية المنتجة بالذكاء الاصطناعي…',opts:['أ) رسومات تعليمية تفاعلية','ب) أصوات فقط','ج) أوراق مكتوبة فقط','د) كتب ورقية'],answer:0},
+{type:'mc',text:'تتميز الرسومات الرقمية التعليمية المنتجة بالذكاء الاصطناعي بأنها…',opts:['أ) أسرع وأكثر تنوعًا في الإنتاج','ب) أقل دقة دائمًا','ج) يدوية فقط','د) غير قابلة للاستخدام'],answer:0}
+];
+const root=document.getElementById('questions');
+questions.forEach((q,i)=>{const card=document.createElement('section');card.className='q';card.id='q'+i;
+card.innerHTML=`<h2><span class="num">السؤال ${i+1}.</span> ${q.text}</h2><div class="options">${q.opts.map((o,j)=>`<label class="opt"><input type="radio" name="q${i}" value="${j}"><span>${o}</span></label>`).join('')}</div><div class="feedback" id="f${i}"></div>`;
+root.appendChild(card)});
+const updateProgress=()=>{let n=questions.filter((q,i)=>document.querySelector(`input[name=q${i}]:checked`)).length;document.getElementById('bar').style.width=(n/questions.length*100)+'%'};
+document.getElementById('quiz').addEventListener('change',updateProgress);
+document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault();let score=0;
+questions.forEach((q,i)=>{const picked=document.querySelector(`input[name=\"q${i}\"]:checked`);if(picked&&Number(picked.value)===q.answer)score++;document.querySelectorAll(`input[name=\"q${i}\"]`).forEach(x=>x.disabled=true)});
+const result=document.getElementById('result');result.style.display='block';document.getElementById('score').textContent=`درجتك: ${score} / ${questions.length}`;
+const eligible=(score/questions.length)>0.85;const next=document.getElementById('module4');next.disabled=!eligible;
+document.getElementById('message').textContent=eligible?'أحسنت! يمكنك الانتقال إلى الموديول الرابع.':'يلزم الحصول على أكثر من 85% لتفعيل زر الانتقال إلى الموديول الرابع.';
+result.scrollIntoView({behavior:'smooth',block:'center'})});
+document.getElementById('module4').addEventListener('click',()=>{if(!document.getElementById('module4').disabled)window.location.href='module4.html'});
+document.getElementById('reset').addEventListener('click',()=>{document.getElementById('quiz').reset();questions.forEach((q,i)=>{const f=document.getElementById('f'+i);f.className='feedback';f.textContent='';document.querySelectorAll(`input[name=q${i}]`).forEach(x=>x.disabled=false)});document.getElementById('result').style.display='none';document.getElementById('module4').disabled=true;updateProgress();window.scrollTo({top:0,behavior:'smooth'})});
+</script></body></html>
+
+<div class="buttons">
+
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

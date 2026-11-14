@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" >
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول الثاني</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+
+
+
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .feedback { margin-top:12px; padding:12px 14px; border-radius:10px; }
+  .correct { background:#e9f8ee; border:1px solid #9bd4ad; }
+  .incorrect { background:#fff0f0; border:1px solid #efb2b2; }
+  .unanswered { background:#fff8e7; border:1px solid #eed38a; }
+  .answer-line { font-weight:bold; margin-top:4px; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+<style>
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول الثاني
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+الثقافة البصرية 
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+الهدف العام
+
+</h2>
+
+<p>
+
+إلمام طالب تكنولوجيا التعليم بمهارات أساسيات الثقافة البصرية
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+الأهداف الإجرائية
+
+</h2>
+
+<ul class="objectives">
+<p>
+
+في نهاية دراسة الموديول يجب أن يكون الطالب قادراً على أن:</p>
+<li>يذكر مفهوم الثقافة البصرية.</li><li>يوضح أهداف الثقافة البصرية.</li>
+<li>يشرح أهمية الثقافة البصرية.</li><li>يحدد خصائص الثقافة البصرية.</li>
+<li>يوضح النظريات التي تقوم عليها الثقافة البصرية.</li><li>يصمم المطابقة البصرية من خلال التمييز بين الأشكال المتشابهة والمتطابقة.</li>
+<li>يستخدم التمييز البصري للتعرف على أوجه التشابه والاختلاف بين المثيرات البصرية.</li><li>يفحص الثبات الإدراكي للتعرف على الشكل رغم اختلاف الحجم أو الاتجاه أو اللون.</li>
+<li>يحلل العلاقات المكانية لتحديد مواقع العناصر واتجاهاتها بالنسبة لبعضها.</li><li>يميز بين الشكل والخلفية لتحديد العنصر الرئيس من الخلفية.</li>
+<li>يستخدم الإغلاق البصري لاستكمال الأجزاء الناقصة للشكل ذهنيًا.</li><li>يوظف التآزر البصري الحركي للتنسيق بين الرؤية وحركة اليد أثناء الأداء.</li>
+<li>ينظم المثيرات البصرية من خلال التركيز على التفاصيل المهمة في الصور والرسومات.</li><li>ينظم المعلومات بصريًا من خلال ترتيب المعلومات باستخدام مخططات أو رسومات.</li>
+<li>يفسر المعلومات البصرية من خلال استنتاج المعاني من الوسائط البصرية.</li><li>يربط المعرفة السابقة بالجديدة من خلال دمج الخبرات السابقة بالمثيرات البصرية الجديدة.</li>
+<li>يوظف الرسومات الرقمية التعليمية لدعم الفهم والتذكر.</li><li>يحدد عناصر المثيرات البصرية للرسومات الرقمية التعليمية.</li>
+<li>يصف خصائص المثيرات البصرية للرسومات الرقمية التعليمية.</li><li>يحلل المثيرات البصرية للرسومات الرقمية التعليمية لتفكيكها إلى العناصر الأساسية.</li>
+<li>يربط بين عناصر الرسومات الرقمية التعليمية والخبرات السابقة.</li><li>يبني المعاني المستخلصة في مواقف جديدة.</li>
+<li>يفسر الرسالة البصرية للرسومات الرقمية التعليمية.</li><li>يقيم الرسالة البصرية ويحدد جوانب القوة والقصور.</li>
+<li>يفحص الرؤية البصرية من خلال ملاحظة.</li><li>يحلل الشكل البصري من خلال تفكيك الشكل إلى عناصره والعلاقات بينها.</li>
+<li>يربط المتشابهات والمتناقضات من خلال المقارنة بين المثيرات البصرية واكتشاف العلاقات.</li><li>يوظف التنظيم البصري من خلال إعادة تنظيم العناصر لإبراز المعنى.</li>
+<li>يستنتج المعاني البصرية من خلال استخلاص المفاهيم والأفكار من المثيرات البصرية.</li><li>يبتكر تمثيلات ورسومات بصرية جديدة تعبر عن الأفكار.</li>
+<li>يفسر الرسائل البصرية من خلال فهم المعاني التي تتضمنها الصور والرسوم والرموز.</li><li>يوظف الرموز البصرية من خلال استخدام الرموز المناسبة للتعبير عن الأفكار.</li>
+<li>يختار الوسيط البصري المناسب من خلال تحديد الوسيط البصري الأكثر ملاءمة للموقف التعليمي.</li><li>يستخدم التعبير البصري من خلال نقل الأفكار والمفاهيم باستخدام الصور والرسومات.</li>
+<li>يطبق التغذية الراجعة البصرية من خلال تقويم الرسالة البصرية وتقديم مقترحات لتحسينها.</li><li>يوظف عناصر التصميم البصري من خلال استخدام الخط، والشكل، واللون، والملمس، والفراغ بصورة صحيحة.</li>
+<li>يطبق مبادئ التصميم البصري من خلال مراعاة التوازن، والتباين، والوحدة، والإيقاع، والتناسب.</li><li>ينظم مكونات التصميم البصري من خلال ترتيب العناصر البصرية بما يحقق الوضوح وسهولة الإدراك.</li>
+<li>يختار الألوان المناسبة من خلال توظيف الألوان بما يخدم المعنى ويحقق الجاذبية.</li><li>ينشئ التصميم البصري بصورة جمالية من خلال إنتاج تصميم متكامل يجمع بين الوظيفة والجمال.</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>
+محتوى الموديول الثاني
+
+</h2>
+
+<div class="content-box">
+
+<br><br>
+
+<div style="
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f1f3f5;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #234568;
+            margin-bottom: 25px;
+        }
+
+        .pdf-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 2px 10px #ccc;
+            border-radius: 8px;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            height: 5350vh;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="pdf-container">
+        <iframe
+            src="assets/pdf/الموديول الثاني.pdf #toolbar=0&navpanes=0&view=FitH"
+            title="الموديول الثاني">
+        </iframe>
+    </div>
+
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<br><br>
+
+
+<div class="card">
+
+<h2 style="text-align: right; direction: rtl; margin: 0;">
+
+النشاط
+</h2>
+
+<p>
+
+عزيزي الدارس / عزيزتي الدارسة، <br> أجب عن السؤال التالي : وضح أهمية الثقافة البصرية في إنتاج الرسومات الرقمية التعليمية ثم أرسله عبر مجموعة الواتس</p>
+
+<a href="https://wa.me/" target="_blank" class="whatsapp-btn">
+  📱 whatsapp
+</a>
+
+</div>
+
+<div class="buttons">
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+<a href="module222.html" class="button">
+
+➡️ الإختبار البعدي للموديول الثاني
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

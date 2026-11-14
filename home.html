@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nada Yasser </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+
+background:#EEF4FB;
+
+}
+
+header{
+
+background:#071A35;
+
+color:white;
+
+padding:18px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo-circle{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+background:#D4AF37;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#071A35;
+
+}
+
+.platform-title{
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+.logout{
+
+background:#D4AF37;
+
+padding:10px 22px;
+
+border-radius:8px;
+
+color:#071A35;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.logout:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+
+margin:35px auto;
+
+}
+
+.profile{
+
+background:white;
+
+padding:20px;
+
+border-radius:70px;
+
+text-align:center;
+
+box-shadow:0 50px 25px rgba(0,0,0,.08);
+
+margin-bottom:70px;
+
+}
+
+.profile img{
+
+width:400px;
+
+height:400px;
+
+border-radius:500%;
+
+border:9px solid #D4AF37;
+
+object-fit:cover;
+
+margin-bottom:30px;
+
+}
+
+.profile h2{
+
+color:#071A35;
+
+margin-bottom:10px;
+
+}
+
+.profile h3{
+
+color:#38BDF8;
+
+margin-bottom:15px;
+
+}
+
+.thesis{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:30px;
+
+}
+
+.thesis h2{
+
+color:#071A35;
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.thesis p{
+
+font-size:20px;
+
+line-height:2;
+
+text-align:center;
+
+}
+
+.about{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:35px;
+
+}
+
+.about h2{
+
+color:#071A35;
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.about p{
+
+line-height:2.2;
+
+font-size:18px;
+
+text-align:justify;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card i{
+
+font-size:55px;
+
+color:#38BDF8;
+
+margin-bottom:20px;
+
+}
+
+.card h2{
+
+color:#071A35;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+.card button{
+
+background:#D4AF37;
+
+border:none;
+
+padding:12px 25px;
+
+font-size:30px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.card button:hover{
+
+background:#071A35;
+
+color:white;
+
+}
+
+footer{
+
+margin-top:50px;
+
+background:#071A35;
+
+color:white;
+
+padding:20px;
+
+text-align:center;
+
+}header{
+    background:#071A35;
+    color:#fff;
+    padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-circle{
+    width:55px;
+    height:55px;
+    background:#D4AF37;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:bold;
+    color:#071A35;
+}
+
+.platform{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.header-buttons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-right:auto;
+}
+
+.header-buttons a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:#D4AF37;
+    color:#071A35;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.header-buttons a:hover{
+    background:#fff;
+}
+
+.header-buttons i{
+    font-size:50px;
+}
+
+
+.page-header {
+    position:static;
+    top: 20px;
+    left: 10;
+    right: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+    box-sizing: border-box;
+    direction: ltr;
+    z-index: 10;
+}
+
+.university-logo {
+    width: 150px;
+    height: 150px;
+    object-fit:none;
+}
+.faculty-logo {
+    position:absolute;
+    top: 10px;
+    right: 100px;
+    width: 170px;
+    height: 150px;
+    object-fit:contain;
+    z-index: 1000;
+}
+
+.kareta-image {
+    display: block;
+    width: 90%;
+    max-width: 1800px;
+    height: auto;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+.pretest-card {
+    text-align: center;
+    padding: 50px 30px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.pretest-card h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.pretest-card h2 {
+    font-size: 30px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.pretest-card button {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 65px;
+    border: none;
+    border-radius: 15px;
+    background-color: #2878C8;
+    color: white;
+    cursor: pointer;
+}
+
+.pretest-card button:hover {
+    background-color: #155A9C;
+    transform: scale(1.05);
+}
+.kareta-image {
+    transform: translateX(-100px);
+}
+
+
+
+
+
+
+.contact-container {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  z-index: 9999;
+  direction: rtl;
+}
+
+.contact-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-options {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.contact-link {
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.email {
+  background: #ea4335;
+}
+
+.contact-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  direction: rtl;
+  text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header class="page-header">
+    <img src="assets/images/download.jpeg"
+         alt="شعار جامعة دمياط"
+         class="university-logo">
+
+    <img src="assets/images/download (1).jpeg"
+         alt="شعار كلية التربية"
+         class="faculty-logo">
+
+    <div class="logo">
+
+
+    </div>
+
+    <div class="header-buttons">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            الصفحة الرئيسية
+        </a>
+
+        <a href="login.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            تسجيل الخروج
+        </a>
+
+    </div>
+
+
+
+    <div class="contact-container">
+  <button class="contact-btn" onclick="toggleContact()">
+    <span>📞</span> التواصل
+  </button>
+
+  <div class="contact-options" id="contactOptions">
+    <a href="https://wa.me/201000000000" target="_blank" class="contact-link whatsapp">
+      <span>🟢</span> واتساب
+    </a>
+
+    <a href="mailto:nadayasserelsayed@gmail.com" class="contact-link email">
+      <span>📧</span> البريد الإلكتروني
+    </a>
+  </div>
+</div>
+
+<script>
+function toggleContact() {
+  const options = document.getElementById("contactOptions");
+  options.style.display =
+    options.style.display === "flex" ? "none" : "flex";
+}
+</script>
+</header>
+
+
+<div class="container">
+
+<div class="profile">
+
+</p>
+
+</div>
+<!-- عنوان الرسالة -->
+
+<div class="thesis">
+
+<h1 class="title">
+خريطة السير في بيئة التعلم </h1>
+
+<p>
+
+
+<img src="./assets/images/kareta.jpg"
+     alt="الصورة"
+     class="kareta-image">
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<div class="pretest-card">
+    <h1>الاختبار القبلي</h1>
+
+    <h2>
+        ابدأ بحل الاختبار القبلي قبل دراسة الموديولات.
+    </h2>
+
+    <button onclick="location.href='pretest.html'">
+        الدخول
+    </button>
+</div>
+
+<style>
+
+</style>
+<footer>
+
+<h3>
+
+© 2026 Nada Yasser 
+
+</h3>
+
+
+</footer>
+</div>
+
+
+
+
+<script>
+
+// رسالة ترحيب بسيطة
+
+const user = localStorage.getItem("currentUser");
+
+if(user){
+
+const profile = document.querySelector(".profile");
+
+const welcome = document.createElement("h1");
+
+welcome.style.color="#071A35";
+
+welcome.style.marginBottom="15px";
+
+welcome.innerHTML="مرحبًا بك : " + user;
+
+profile.insertBefore(welcome, profile.firstChild);
+
+}
+
+</script>
+
+</body>
+
+</html>

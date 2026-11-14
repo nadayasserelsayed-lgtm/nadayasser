@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول الخامس</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .module-access { margin-top:18px; padding:16px; border-radius:12px; background:#f4f7fb; border:1px solid var(--border); }
+  .module-button { display:inline-block; text-decoration:none; margin-top:8px; background:#17834a; color:#fff; }
+  .module-button:disabled { background:#aab3c1; color:#f7f8fa; cursor:not-allowed; opacity:.85; }
+  .status-pass { color:#17834a; font-weight:bold; }
+  .status-fail { color:#b42318; font-weight:bold; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول الخامس
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+انتاج الرسومات الرقمية التعليمية 
+</p>
+
+</div>
+
+
+<div class="card">
+
+    <h2 style="text-align: right; direction: rtl; margin: 0;">
+
+تعليمات الاختبار البعدي للموديول الخامس
+</h2>
+
+<ul class="objectives">
+        <li> عزيزي الدارس / عزيزتي الدارسة ، يُرجى قراءة التعليمات التالية جيدًا قبل البدء في الإجابة عن أسئلة الاختبار:</li>
+
+<li>   يهدف هذا الاختبار إلى تحديد ما تعلمته خلال دراسة محتوى الموديول.
+</li>
+
+<li> يتكون الاختبار من 43 سؤالًا موزعة على قسمين:<br>
+   - القسم الأول: 12 سؤالًا من نوع الصواب والخطأ.
+  <br> - القسم الثاني: 31 سؤالًا من نوع الاختيار من متعدد.</li>
+
+<li>تُخصص درجة واحدة لكل سؤال، بإجمالي 43 درجة للاختبار كاملًا.</li>
+
+<li>اقرأ كل سؤال بعناية، وتأكد من فهم المطلوب قبل اختيار الإجابة.
+</li>
+
+<li>لا تتسرع في الإجابة، وخذ الوقت الكافي لقراءة السؤال والبدائل.
+</li>
+
+<li>اختار إجابة واحدة فقط من بين البدائل المتاحة لكل سؤال.
+</li>
+
+<li>أجب عن جميع الأسئلة بالترتيب، مع مراعاة الدقة والتركيز.
+</li>
+
+ <li>تأكد من الإجابة عن جميع الأسئلة، وعدم ترك أي سؤال دون إجابة.</li>
+ <li>راجع إجاباتك جيدًا قبل إنهاء الاختبار.</li>
+
+<li>اعتمد على معلوماتك وما تم دراسته في الموديلولات التعليمية في الإجابة، دون الاستعانة بمصادر خارجية.
+</li>
+
+<li>بعد الانتهاء من الإجابة عن جميع الأسئلة، راجع إجاباتك ثم اضغط على زر إرسال الإجابات.
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<body>
+<div class="container">
+  <header>
+      <h1>عزيزي الدارس/ عزيزتي الدارسة، أجب عن الأسئلة التالية:</h1>
+  </header>
+  
+<style>
+:root{font-family:Tahoma,Arial,sans-serif;color:#172033;background:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;padding:16px;line-height:1.8}
+.wrap{max-width:900px;margin:auto}.hero{background:#173b69;color:white;padding:22px;border-radius:16px;margin-bottom:16px}
+h1{font-size:1.45rem;margin:0 0 8px}.sub{opacity:.9}.notice{background:#eaf2ff;color:#163c70;padding:10px 14px;border-radius:10px;margin-top:12px}
+#quiz{display:grid;gap:12px}.qcard{background:#fff;border:1px solid #dbe3ee;border-radius:14px;padding:16px;box-shadow:0 2px 7px #1720330a}
+.qhead{display:flex;gap:10px;align-items:flex-start;font-weight:700;margin-bottom:10px}.num{background:#e7effb;color:#173b69;border-radius:8px;padding:0 10px;flex-shrink:0}
+.options{display:grid;gap:8px}.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid #d9e1ec;border-radius:10px;cursor:pointer}.opt:hover{background:#f6f9ff}.opt input{margin-top:7px;accent-color:#205da8}
+.feedback{display:none;margin-top:10px;padding:9px 12px;border-radius:9px;font-weight:700}.correct{background:#e6f7ed;color:#17663b;border-color:#9ad8b3!important}.wrong{background:#fff0f0;color:#9b2525;border-color:#f0b0b0!important}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.btn{border:0;border-radius:10px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}.btn:disabled{opacity:.45;cursor:not-allowed}.primary{background:#174a83;color:#fff}.secondary{background:#e4eaf2;color:#24354b}
+#result{display:none;background:#fff;border:2px solid #174a83;border-radius:16px;padding:20px;margin:16px 0;text-align:center}.score{font-size:2rem;color:#174a83;font-weight:800}.small{color:#58677a;font-size:.92rem}
+@media(min-width:650px){.options.mcopts{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body><main class="wrap">
+<form id="quiz"><div id="questions"></div><div class="actions"><button class="btn primary" type="submit">إنهاء الاختبار وعرض النتيجة</button><button class="btn secondary" type="button" id="reset">إعادة الاختبار</button></div></form>
+<section id="result" aria-live="polite">
+<h2>نتيجة الاختبار</h2>
+<div class="score" id="score"></div>
+<p id="message"></p>
+<button class="btn primary" id="nextModule" type="button" disabled>الانتقال إلى الموديول السادس</button>
+<button class="btn secondary" id="again" type="button">إعادة المحاولة</button>
+</section>
+</main>
+<script>
+const questions = [{"n": 1, "q": "يقتصر الإنتاج التعليمي للرسومات الرقمية على حفظ الصور فقط.", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 2, "q": "لا يحتاج Canva إلى تثبيت قبل الاستخدام.", "type": "tf", "options": ["صح", "خطأ"], "a": "صح"}, {"n": 3, "q": "لا يمكن استخدام Canva عبر الإنترنت.", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 4, "q": "Create a Design يستخدم لحذف المشاريع.", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 5, "q": "Layout تساعد في تنظيم التصميم بصريًا.", "type": "tf", "options": ["صح", "خطأ"], "a": "صح"}, {"n": 6, "q": "Magic Design أداة تقترح تصميمات مناسبة تلقائيًا.", "type": "tf", "options": ["صح", "خطأ"], "a": "صح"}, {"n": 7, "q": "Resize لا يؤثر على حجم التصميم.", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 8, "q": "لا يمكن إضافة صور في Canva", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 9, "q": "يمكن إزالة الخلفية في Canva تلقائيًا.", "type": "tf", "options": ["صح", "خطأ"], "a": "صح"}, {"n": 10, "q": "لا يمكن حفظ التصميم في Canva", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 11, "q": "لا يمكن مشاركة التصميم من Canva", "type": "tf", "options": ["صح", "خطأ"], "a": "خطأ"}, {"n": 12, "q": "Present تحول التصميم إلى عرض تقديمي.", "type": "tf", "options": ["صح", "خطأ"], "a": "صح"}, {"n": 13, "q": "ما المقصود بالإنتاج التعليمي للرسومات الرقمية التعليمية؟", "type": "mc", "options": ["عرض الصور بدون هدف تعليمي", "إعداد وإنتاج رسومات رقمية تخدم أهدافًا تعليمية محددة", "تصميم رسومات رقمية عشوائية", "حفظ الصور فقط على الجهاز"], "a": "إعداد وإنتاج رسومات رقمية تخدم أهدافًا تعليمية محددة"}, {"n": 14, "q": "أي مما يلي يمثل من متطلبات إنتاج الرسومات الرقمية التعليمية؟", "type": "mc", "options": ["اختيار ألوان غير مناسبة", "تجاهل الفئة المستهدفة", "حذف العناصر البصرية", "تحديد الأدوات والبرامج المناسبة للإنتاج"], "a": "تحديد الأدوات والبرامج المناسبة للإنتاج"}, {"n": 15, "q": "يهدف تطبيق معايير إنتاج الرسومات الرقمية إلى:", "type": "mc", "options": ["ضمان جودة وفعالية الرسومات التعليمية", "زيادة حجم الملف", "تقليل عدد الصور", "إلغاء التصميم"], "a": "ضمان جودة وفعالية الرسومات التعليمية"}, {"n": 16, "q": "لماذا يجب وصف عناصر الرسومات الرقمية بدقة؟", "type": "mc", "options": ["لإلغاء الفكرة التعليمية", "لضمان فهم المحتوى التعليمي بشكل صحيح", "لزيادة التعقيد", "لتقليل وضوح التصميم"], "a": "لضمان فهم المحتوى التعليمي بشكل صحيح"}, {"n": 17, "q": "ما الهدف من اختيار ألوان متوافقة في التصميم التعليمي؟", "type": "mc", "options": ["تشويش المتعلم", "زيادة عدد العناصر", "تقليل الجودة", "تحسين الجاذبية البصرية والفهم"], "a": "تحسين الجاذبية البصرية والفهم"}, {"n": 18, "q": "يستخدم الخط في الرسومات الرقمية بهدف:", "type": "mc", "options": ["تقليل القراءة", "الزخرفة فقط", "توصيل معنى تعليمي واضح", "إخفاء المحتوى"], "a": "توصيل معنى تعليمي واضح"}, {"n": 19, "q": "تُستخدم الأشكال في التصميم من أجل:", "type": "mc", "options": ["دعم الفهم البصري للمحتوى", "إلغاء الرسالة", "التشتيت", "تقليل الوضوح"], "a": "دعم الفهم البصري للمحتوى"}, {"n": 20, "q": "يوظف التوازن في التصميم التعليمي بغرض:", "type": "mc", "options": ["استخدام لون واحد فقط", "تكديس العناصر", "حذف الصور", "توزيع العناصر بشكل بصري مناسب"], "a": "توزيع العناصر بشكل بصري مناسب"}, {"n": 21, "q": "يهدف التباين إلى:", "type": "mc", "options": ["إزالة الخلفية", "إبراز العناصر المهمة", "إخفاء النص", "تقليل الألوان"], "a": "إبراز العناصر المهمة"}, {"n": 22, "q": "ما الهدف من معيار الوضوح؟", "type": "mc", "options": ["تقليل الصور", "تسهيل فهم المحتوى بسرعة", "حذف النص", "زيادة التعقيد"], "a": "تسهيل فهم المحتوى بسرعة"}, {"n": 23, "q": "يرتبط معيار الملاءمة بـ:", "type": "mc", "options": ["الفئة المستهدفة والمحتوى", "لون الخلفية", "حجم الملف فقط", "عدد الصفحات"], "a": "الفئة المستهدفة والمحتوى"}, {"n": 24, "q": "الهدف من الجاذبية البصرية هو:", "type": "mc", "options": ["جذب انتباه المتعلم وتحفيزه", "تقليل الألوان", "تقليل التفاعل", "حذف العناصر"], "a": "جذب انتباه المتعلم وتحفيزه"}, {"n": 25, "q": "ما الخطوة الأولى لاستخدام تطبيق Canva؟", "type": "mc", "options": ["تصميم مشروع", "تثبيت التطبيق على الجهاز", "حذف الملفات", "مشاركة التصميم"], "a": "تثبيت التطبيق على الجهاز"}, {"n": 26, "q": "كيف يمكن الدخول إلى Canva؟", "type": "mc", "options": ["عبر برنامج Word", "عبر الهاتف فقط", "عبر متصفح الإنترنت", "عبر Photoshop فقط"], "a": "عبر متصفح الإنترنت"}, {"n": 27, "q": "ما وظيفة خيار Create a Design؟", "type": "mc", "options": ["حذف التصميم", "إنشاء تصميم جديد", "تصدير الملف", "تغيير الحساب"], "a": "إنشاء تصميم جديد"}, {"n": 28, "q": "أي مما يلي يعتبر من أنواع التصميم في Canva؟", "type": "mc", "options": ["ملفات صوتية", "فيديو فقط", "إنفوجرافيك وعرض تقديمي", "برامج تشغيل"], "a": "إنفوجرافيك وعرض تقديمي"}, {"n": 29, "q": "ما فائدة اختيار قالب جاهز؟", "type": "mc", "options": ["حذف العناصر", "زيادة التعقيد", "تقليل الجودة", "تسريع عملية التصميم"], "a": "تسريع عملية التصميم"}, {"n": 30, "q": "لماذا يتم تحديد أبعاد التصميم؟", "type": "mc", "options": ["لإبطاء العمل", "لضبط حجم التصميم حسب الاستخدام التعليمي", "لحذف الصور", "لإلغاء النصوص"], "a": "لضبط حجم التصميم حسب الاستخدام التعليمي"}, {"n": 31, "q": "أداة Layout تستخدم من أجل:", "type": "mc", "options": ["تغيير اللغة", "حذف الصور", "تصغير الشاشة", "ترتيب وتنظيم العناصر"], "a": "ترتيب وتنظيم العناصر"}, {"n": 32, "q": "وظيفة Magic Design هي:", "type": "mc", "options": ["إيقاف البرنامج", "تغيير الحساب", "تقديم اقتراحات تصميمية تلقائية", "حذف التصميم"], "a": "تقديم اقتراحات تصميمية تلقائية"}, {"n": 33, "q": "أداة Text تستخدم لـ:", "type": "mc", "options": ["تغيير الخلفية", "إضافة النصوص والعناوين", "تصدير الملف", "حذف الصور"], "a": "إضافة النصوص والعناوين"}, {"n": 34, "q": "ضبط المحاذاة يهدف إلى:", "type": "mc", "options": ["حذف العناصر", "تحسين تنظيم النص داخل التصميم", "تغيير اللون فقط", "تشويه النص"], "a": "تحسين تنظيم النص داخل التصميم"}, {"n": 35, "q": "Charts تستخدم لـ:", "type": "mc", "options": ["عرض البيانات بشكل بصري", "تغيير الألوان فقط", "الرسم العشوائي", "حذف الصور"], "a": "عرض البيانات بشكل بصري"}, {"n": 36, "q": "أداة Resize تستخدم لـ:", "type": "mc", "options": ["حذف العناصر", "كتابة النص", "تغيير حجم التصميم", "تغيير اللون"], "a": "تغيير حجم التصميم"}, {"n": 37, "q": "Crop تستخدم لـ:", "type": "mc", "options": ["قص الصور", "حذف المشروع", "كتابة النص", "إضافة صوت"], "a": "قص الصور"}, {"n": 38, "q": "أداة Adjust تستخدم لـ:", "type": "mc", "options": ["تغيير اللغة", "إنشاء تصميم", "حذف الصور", "ضبط الألوان والإضاءة"], "a": "ضبط الألوان والإضاءة"}, {"n": 39, "q": "ميزة Remove Background تستخدم لـ:", "type": "mc", "options": ["تغيير الخط", "إضافة نص", "إزالة الخلفية تلقائيًا", "زيادة حجم الصورة"], "a": "إزالة الخلفية تلقائيًا"}, {"n": 40, "q": "PNG و JPG تستخدم من أجل:", "type": "mc", "options": ["حفظ الصور", "حذف الملفات", "كتابة النص", "تشغيل الفيديو"], "a": "حفظ الصور"}, {"n": 41, "q": "أداة Share تستخدم لـ:", "type": "mc", "options": ["حذف التصميم", "تغيير اللون", "مشاركة التصميم عبر الإنترنت", "تقليل الجودة"], "a": "مشاركة التصميم عبر الإنترنت"}, {"n": 42, "q": "Copy Link أداة تستخدم من أجل:", "type": "mc", "options": ["تغيير الخط", "نسخ رابط التصميم", "تعديل الصور", "حذف الرابط"], "a": "نسخ رابط التصميم"}, {"n": 43, "q": "أداة Present تستخدم لـ:", "type": "mc", "options": ["حذف التصميم", "ضغط الملف", "تغيير اللون", "عرض التصميم كشرائح"], "a": "عرض التصميم كشرائح"}];
+const host=document.getElementById('questions');
+questions.forEach((q,i)=>{
+ const card=document.createElement('section');card.className='qcard';card.dataset.index=i;
+ const head=document.createElement('div');head.className='qhead';
+ const num=document.createElement('span');num.className='num';num.textContent=q.n+'.';
+ const text=document.createElement('span');text.textContent=q.q;
+ head.append(num,text);card.append(head);
+ const opts=document.createElement('div');opts.className='options'+(q.type==='mc'?' mcopts':'');
+ q.options.forEach((o,j)=>{
+  const label=document.createElement('label');label.className='opt';
+  const input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=o;
+  const span=document.createElement('span');span.textContent=(q.type==='mc'?['أ','ب','ج','د'][j]+') ':'')+o;
+  label.append(input,span);opts.append(label);
+ });
+ card.append(opts);
+ const fb=document.createElement('div');fb.className='feedback';fb.id='fb'+i;card.append(fb);host.append(card);
+});
+function grade(){
+ let score=0;
+ questions.forEach((q,i)=>{
+  const card=host.children[i];
+  const selected=card.querySelector('input:checked');
+  if(selected && selected.value===q.a) score++;
+  card.querySelectorAll('input').forEach(x=>x.disabled=true);
+  const fb=document.getElementById('fb'+i);
+  fb.style.display='none';
+  card.querySelectorAll('.opt').forEach(label=>label.classList.remove('correct','wrong'));
+ });
+ const percent=(score/questions.length)*100;
+ const eligible=percent>85;
+ document.getElementById('score').textContent=score+' / '+questions.length;
+ document.getElementById('message').textContent=eligible
+  ? 'أحسنت! يمكنك الانتقال إلى الموديول السادس.'
+  : 'لم تحقق أكثر من 85%. أعد المحاولة بعد مراجعة الموديول.';
+ const next=document.getElementById('nextModule');
+ next.disabled=!eligible;
+ document.getElementById('result').style.display='block';
+ document.querySelector('#quiz button[type="submit"]').disabled=true;
+ document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.getElementById('quiz').addEventListener('submit',e=>{e.preventDefault();grade();});
+function resetQuiz(){document.getElementById('quiz').reset();document.querySelectorAll('#quiz input').forEach(x=>x.disabled=false);document.querySelectorAll('.feedback').forEach(x=>x.style.display='none');document.querySelectorAll('.opt').forEach(x=>x.classList.remove('correct','wrong'));document.querySelector('#quiz button[type="submit"]').disabled=false;document.getElementById('result').style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
+document.getElementById('reset').addEventListener('click',resetQuiz);document.getElementById('again').addEventListener('click',resetQuiz);document.getElementById('nextModule').addEventListener('click',()=>{if(!document.getElementById('nextModule').disabled) window.location.href='module6.html';});
+</script></body></html>
+
+
+
+
+<div class="buttons">
+
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

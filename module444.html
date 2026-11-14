@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول الرابع</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .module-access { margin-top:18px; padding:16px; border-radius:12px; background:#f4f7fb; border:1px solid var(--border); }
+  .module-button { display:inline-block; text-decoration:none; margin-top:8px; background:#17834a; color:#fff; }
+  .module-button:disabled { background:#aab3c1; color:#f7f8fa; cursor:not-allowed; opacity:.85; }
+  .status-pass { color:#17834a; font-weight:bold; }
+  .status-fail { color:#b42318; font-weight:bold; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول الرابع
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+تصميم الرسومات الرقمية التعليمية 
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+    <h2 style="text-align: right; direction: rtl; margin: 0;">
+
+تعليمات الاختبار البعدي للموديول الرابع
+</h2>
+
+<ul class="objectives">
+        <li> عزيزي الدارس / عزيزتي الدارسة ، يُرجى قراءة التعليمات التالية جيدًا قبل البدء في الإجابة عن أسئلة الاختبار:</li>
+
+<li>   يهدف هذا الاختبار إلى تحديد ما تعلمته خلال دراسة محتوى الموديول.
+</li>
+
+<li> يتكون الاختبار من 20 سؤالًا موزعة على قسمين:<br>
+   - القسم الأول: 6 سؤالًا من نوع الصواب والخطأ.
+  <br> - القسم الثاني: 14 سؤالًا من نوع الاختيار من متعدد.</li>
+
+<li>تُخصص درجة واحدة لكل سؤال، بإجمالي 20 درجة للاختبار كاملًا.</li>
+
+<li>اقرأ كل سؤال بعناية، وتأكد من فهم المطلوب قبل اختيار الإجابة.
+</li>
+
+<li>لا تتسرع في الإجابة، وخذ الوقت الكافي لقراءة السؤال والبدائل.
+</li>
+
+<li>اختار إجابة واحدة فقط من بين البدائل المتاحة لكل سؤال.
+</li>
+
+<li>أجب عن جميع الأسئلة بالترتيب، مع مراعاة الدقة والتركيز.
+</li>
+
+ <li>تأكد من الإجابة عن جميع الأسئلة، وعدم ترك أي سؤال دون إجابة.</li>
+ <li>راجع إجاباتك جيدًا قبل إنهاء الاختبار.</li>
+
+<li>اعتمد على معلوماتك وما تم دراسته في الموديلولات التعليمية في الإجابة، دون الاستعانة بمصادر خارجية.
+</li>
+
+<li>بعد الانتهاء من الإجابة عن جميع الأسئلة، راجع إجاباتك ثم اضغط على زر إرسال الإجابات.
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<body>
+
+
+
+
+<style>
+:root{--navy:#17365d;--blue:#2463a6;--pale:#eef5fc;--green:#16794b;--red:#b42318}
+*{box-sizing:border-box}
+body{margin:0;background:#f3f6fa;color:#202938;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+header{background:linear-gradient(135deg,#17365d,#2875b9);color:white;padding:28px 18px;text-align:center}
+header h1{font-size:clamp(1.25rem,4vw,2rem);margin:0 0 8px}
+header p{margin:0;opacity:.95}
+main{max-width:950px;margin:22px auto;padding:0 14px 36px}
+.instructions,.question,.result{background:white;border:1px solid #dce4ee;border-radius:14px;box-shadow:0 4px 14px #17365d0b}
+.instructions{padding:14px 18px;margin-bottom:16px}
+.question{padding:18px;margin:14px 0}
+.qhead{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-weight:bold}
+.num{background:var(--pale);color:var(--navy);border-radius:9px;padding:1px 10px;min-width:40px;text-align:center}
+.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:9px}
+.option{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;border:1px solid #d8e1eb;border-radius:10px;cursor:pointer;transition:.15s}
+.option:hover{border-color:var(--blue);background:#f7fbff}
+.option input{margin-top:7px;accent-color:var(--blue);flex-shrink:0}
+.option:has(input:checked){border-color:var(--blue);background:#eef6ff}
+.feedback{display:none!important;margin-top:12px;padding:9px 12px;border-radius:9px;font-weight:bold}
+.feedback.good{display:block;color:var(--green);background:#eaf7ef}
+.feedback.bad{display:block;color:var(--red);background:#fff0ef}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0}
+button{font:inherit;border:0;border-radius:10px;padding:11px 22px;cursor:pointer;font-weight:bold}
+#submit{background:var(--navy);color:white}
+#reset{background:#e4ebf3;color:#17365d}
+button:hover{filter:brightness(.96)}
+.result{display:none;text-align:center;padding:20px;margin-top:20px}
+.score{font-size:1.65rem;color:var(--navy);font-weight:bold}
+.small{color:#526174;font-size:.92rem}
+footer{text-align:center;color:#68778b;font-size:.85rem;padding:12px}
+@media(max-width:520px){.question{padding:14px}.options{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>عزيزي الدارس/ عزيزتي الدارسة، أجب عن الأسئلة التالية:</h1>
+</header>
+<main>
+<form id="quiz">
+<section class="question" data-answer="صحيح">
+<div class="qhead"><span class="num">1</span><span>وصف العناصر بدقة يساعد في تعزيز الفهم البصري للمحتوى.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q1" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q1" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="خطأ">
+<div class="qhead"><span class="num">2</span><span>كلما زاد التعقيد زاد وضوح الرسالة التعليمية.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q2" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q2" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="خطأ">
+<div class="qhead"><span class="num">3</span><span>التصميم الجيد لا يحتاج أن يكون جذابًا.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q3" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q3" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="صحيح">
+<div class="qhead"><span class="num">4</span><span>تحديد الأهداف التعليمية يساعد على توجيه عملية إنتاج الرسومات الرقمية.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q4" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q4" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="خطأ">
+<div class="qhead"><span class="num">5</span><span>تحليل المفاهيم لا علاقة له بتنظيم المحتوى التعليمي.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q5" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q5" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="صحيح">
+<div class="qhead"><span class="num">6</span><span>التصميم التعليمي يعتمد على التخطيط المسبق.</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q6" value="صحيح"> صحيح (✔)</label>
+<label class="option"><input type="radio" name="q6" value="خطأ"> خطأ (×)</label>
+</div><div class="feedback"></div></section>
+<section class="question" data-answer="د) صياغة أهداف سلوكية واضحة للمحتوى"><div class="qhead"><span class="num">7</span><span>أي مما يلي يمثل خطوة تحديد الأهداف التعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q7" value="أ) اختيار الألوان"> أ) اختيار الألوان</label><label class="option"><input type="radio" name="q7" value="ب) حفظ التصميم"> ب) حفظ التصميم</label><label class="option"><input type="radio" name="q7" value="ج) إدراج الصور فقط"> ج) إدراج الصور فقط</label><label class="option"><input type="radio" name="q7" value="د) صياغة أهداف سلوكية واضحة للمحتوى"> د) صياغة أهداف سلوكية واضحة للمحتوى</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ب) تحديد العلاقات بين المفاهيم الرئيسية والفرعية"><div class="qhead"><span class="num">8</span><span>الهدف من تحليل المفاهيم في الرسومات الرقمية التعليمية المراد إنتاجها هو:</span></div><div class="options"><label class="option"><input type="radio" name="q8" value="أ) حذف المحتوى"> أ) حذف المحتوى</label><label class="option"><input type="radio" name="q8" value="ب) تحديد العلاقات بين المفاهيم الرئيسية والفرعية"> ب) تحديد العلاقات بين المفاهيم الرئيسية والفرعية</label><label class="option"><input type="radio" name="q8" value="ج) تغيير الخطوط"> ج) تغيير الخطوط</label><label class="option"><input type="radio" name="q8" value="د) زيادة حجم التصميم"> د) زيادة حجم التصميم</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ج) مفاهيم يمكن توضيحها بالرسوم"><div class="qhead"><span class="num">9</span><span>أي مما يلي يمثل معلومات تحتاج إلى تمثيل بصري؟</span></div><div class="options"><label class="option"><input type="radio" name="q9" value="أ) نصوص طويلة فقط"> أ) نصوص طويلة فقط</label><label class="option"><input type="radio" name="q9" value="ب) ملفات صوتية فقط"> ب) ملفات صوتية فقط</label><label class="option"><input type="radio" name="q9" value="ج) مفاهيم يمكن توضيحها بالرسوم"> ج) مفاهيم يمكن توضيحها بالرسوم</label><label class="option"><input type="radio" name="q9" value="د) بيانات غير مهمة"> د) بيانات غير مهمة</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="د) اختيار نوع الرسم المناسب لكل محتوى"><div class="qhead"><span class="num">10</span><span>تصنيف المحتوى يساعد على:</span></div><div class="options"><label class="option"><input type="radio" name="q10" value="أ) حذف العناصر"> أ) حذف العناصر</label><label class="option"><input type="radio" name="q10" value="ب) تقليل الجودة"> ب) تقليل الجودة</label><label class="option"><input type="radio" name="q10" value="ج) تغيير الألوان فقط"> ج) تغيير الألوان فقط</label><label class="option"><input type="radio" name="q10" value="د) اختيار نوع الرسم المناسب لكل محتوى"> د) اختيار نوع الرسم المناسب لكل محتوى</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="أ) اختيار تصميم مناسب للمتعلمين"><div class="qhead"><span class="num">11</span><span>معرفة الفئة المستهدفة يساعد في:</span></div><div class="options"><label class="option"><input type="radio" name="q11" value="أ) اختيار تصميم مناسب للمتعلمين"> أ) اختيار تصميم مناسب للمتعلمين</label><label class="option"><input type="radio" name="q11" value="ب) تقليل الجودة"> ب) تقليل الجودة</label><label class="option"><input type="radio" name="q11" value="ج) زيادة حجم الملف"> ج) زيادة حجم الملف</label><label class="option"><input type="radio" name="q11" value="د) حذف النصوص"> د) حذف النصوص</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ب) بناء تنظيم بصري منطقي"><div class="qhead"><span class="num">12</span><span>استنتاج العلاقات بين المفاهيم لإنتاج الرسومات الرقمية التعليمية يساعد في:</span></div><div class="options"><label class="option"><input type="radio" name="q12" value="أ) تشتيت المحتوى"> أ) تشتيت المحتوى</label><label class="option"><input type="radio" name="q12" value="ب) بناء تنظيم بصري منطقي"> ب) بناء تنظيم بصري منطقي</label><label class="option"><input type="radio" name="q12" value="ج) حذف الصور"> ج) حذف الصور</label><label class="option"><input type="radio" name="q12" value="د) تغيير الألوان فقط"> د) تغيير الألوان فقط</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="د) نوع الموقف التعليمي"><div class="qhead"><span class="num">13</span><span>اختيار نوع الرسم يعتمد على:</span></div><div class="options"><label class="option"><input type="radio" name="q13" value="أ) حجم الخط فقط"> أ) حجم الخط فقط</label><label class="option"><input type="radio" name="q13" value="ب) اسم المصمم"> ب) اسم المصمم</label><label class="option"><input type="radio" name="q13" value="ج) لون الخلفية"> ج) لون الخلفية</label><label class="option"><input type="radio" name="q13" value="د) نوع الموقف التعليمي"> د) نوع الموقف التعليمي</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ب) تحسين التنظيم البصري"><div class="qhead"><span class="num">14</span><span>ترتيب المحتوى يهدف إلى:</span></div><div class="options"><label class="option"><input type="radio" name="q14" value="أ) زيادة التعقيد"> أ) زيادة التعقيد</label><label class="option"><input type="radio" name="q14" value="ب) تحسين التنظيم البصري"> ب) تحسين التنظيم البصري</label><label class="option"><input type="radio" name="q14" value="ج) حذف البيانات"> ج) حذف البيانات</label><label class="option"><input type="radio" name="q14" value="د) تغيير اللغة فقط"> د) تغيير اللغة فقط</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ب) تخطيط منظم لإنشاء محتوى تعليمي فعال"><div class="qhead"><span class="num">15</span><span>التصميم التعليمي هو:</span></div><div class="options"><label class="option"><input type="radio" name="q15" value="أ) عملية عشوائية"> أ) عملية عشوائية</label><label class="option"><input type="radio" name="q15" value="ب) تخطيط منظم لإنشاء محتوى تعليمي فعال"> ب) تخطيط منظم لإنشاء محتوى تعليمي فعال</label><label class="option"><input type="radio" name="q15" value="ج) تعديل الصور فقط"> ج) تعديل الصور فقط</label><label class="option"><input type="radio" name="q15" value="د) رسم عشوائي"> د) رسم عشوائي</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="أ) التنظيم"><div class="qhead"><span class="num">16</span><span>من خصائص التصميم التعليمي:</span></div><div class="options"><label class="option"><input type="radio" name="q16" value="أ) التنظيم"> أ) التنظيم</label><label class="option"><input type="radio" name="q16" value="ب) التكرار غير المنظم"> ب) التكرار غير المنظم</label><label class="option"><input type="radio" name="q16" value="ج) الإهمال"> ج) الإهمال</label><label class="option"><input type="radio" name="q16" value="د) العشوائية"> د) العشوائية</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="أ) نوع المحتوى والأهداف"><div class="qhead"><span class="num">17</span><span>يتم اختيار نموذج التصميم بناءً على:</span></div><div class="options"><label class="option"><input type="radio" name="q17" value="أ) نوع المحتوى والأهداف"> أ) نوع المحتوى والأهداف</label><label class="option"><input type="radio" name="q17" value="ب) حجم الخط"> ب) حجم الخط</label><label class="option"><input type="radio" name="q17" value="ج) لون الخلفية"> ج) لون الخلفية</label><label class="option"><input type="radio" name="q17" value="د) اسم البرنامج"> د) اسم البرنامج</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="ب) التحليل"><div class="qhead"><span class="num">18</span><span>أول خطوة في التصميم التعليمي:</span></div><div class="options"><label class="option"><input type="radio" name="q18" value="أ) النشر"> أ) النشر</label><label class="option"><input type="radio" name="q18" value="ب) التحليل"> ب) التحليل</label><label class="option"><input type="radio" name="q18" value="ج) الحفظ"> ج) الحفظ</label><label class="option"><input type="radio" name="q18" value="د) التلوين"> د) التلوين</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="د) التوازن"><div class="qhead"><span class="num">19</span><span>من مبادئ التصميم التعليمي:</span></div><div class="options"><label class="option"><input type="radio" name="q19" value="أ) الإهمال"> أ) الإهمال</label><label class="option"><input type="radio" name="q19" value="ب) العشوائية"> ب) العشوائية</label><label class="option"><input type="radio" name="q19" value="ج) الفوضى"> ج) الفوضى</label><label class="option"><input type="radio" name="q19" value="د) التوازن"> د) التوازن</label></div><div class="feedback"></div></section>
+<section class="question" data-answer="أ) تحسين الفهم البصري"><div class="qhead"><span class="num">20</span><span>توظيف عناصر التصميم التعليمي للرسومات الرقمية التعليمية يهدف إلى:</span></div><div class="options"><label class="option"><input type="radio" name="q20" value="أ) تحسين الفهم البصري"> أ) تحسين الفهم البصري</label><label class="option"><input type="radio" name="q20" value="ب) زيادة التشويش"> ب) زيادة التشويش</label><label class="option"><input type="radio" name="q20" value="ج) تقليل الجودة"> ج) تقليل الجودة</label><label class="option"><input type="radio" name="q20" value="د) حذف النصوص"> د) حذف النصوص</label></div><div class="feedback"></div></section>
+
+<div class="actions">
+<button id="submit" type="button">إنهاء الاختبار وعرض الدرجة</button>
+<button id="reset" type="reset">إعادة المحاولة</button>
+</div>
+</form>
+<div id="result" class="result" aria-live="polite"></div>
+</main>
+<script>
+const form=document.getElementById('quiz');
+const result=document.getElementById('result');
+const submitButton=document.getElementById('submit');
+function addModuleButton(enabled){
+  const button=document.createElement('button');
+  button.type='button';
+  button.id='module5';
+  button.textContent='الانتقال إلى الموديول الخامس';
+  button.disabled=!enabled;
+  button.style.background=enabled?'#16794b':'#aab4c0';
+  button.style.color='#fff';
+  button.style.cursor=enabled?'pointer':'not-allowed';
+  button.title=enabled?'يمكنك الانتقال إلى الموديول الخامس':'يجب الحصول على أكثر من 85% لتفعيل الزر';
+  button.addEventListener('click',()=>{if(!button.disabled) window.location.href='module5.html';});
+  result.appendChild(button);
+}
+submitButton.addEventListener('click',()=>{
+ const qs=[...document.querySelectorAll('.question')];
+ let score=0;
+ qs.forEach(q=>{
+   const chosen=q.querySelector('input:checked');
+   if(chosen && chosen.value===q.dataset.answer) score++;
+   // لا يتم عرض الإجابات الصحيحة أو الخاطئة للطالب.
+   const fb=q.querySelector('.feedback');
+   if(fb){fb.className='feedback';fb.textContent='';}
+ });
+ const percentage=score/qs.length*100;
+ result.style.display='block';
+ result.innerHTML='<div class="score">درجتك: '+score+' من '+qs.length+'</div>';
+ addModuleButton(percentage>85);
+ result.scrollIntoView({behavior:'smooth',block:'center'});
+});
+form.addEventListener('reset',()=>{
+ setTimeout(()=>{
+   document.querySelectorAll('.feedback').forEach(f=>{f.className='feedback';f.textContent='';});
+   result.style.display='none';result.innerHTML='';
+ },0);
+});
+</script>
+</body>
+</html>
+<div class="buttons">
+
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

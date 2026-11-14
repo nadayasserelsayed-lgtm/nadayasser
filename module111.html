@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول الأول</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .module-access { margin-top:18px; padding:16px; border-radius:12px; background:#f4f7fb; border:1px solid var(--border); }
+  .module-button { display:inline-block; text-decoration:none; margin-top:8px; background:#17834a; color:#fff; }
+  .module-button:disabled { background:#aab3c1; color:#f7f8fa; cursor:not-allowed; opacity:.85; }
+  .status-pass { color:#17834a; font-weight:bold; }
+  .status-fail { color:#b42318; font-weight:bold; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول الأول
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+أساسيات عن الرسومات الرقمية التعليمية 
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+    <h2 style="text-align: right; direction: rtl; margin: 0;">
+
+تعليمات الاختبار البعدي للموديول الاول 
+</h2>
+
+<ul class="objectives">
+
+
+        <li> عزيزي الدارس / عزيزتي الدارسة ، يُرجى قراءة التعليمات التالية جيدًا قبل البدء في الإجابة عن أسئلة الاختبار:</li>
+
+<li>   يهدف هذا الاختبار إلى تحديد ما تعلمته خلال دراسة محتوى الموديول.
+</li>
+
+<li> يتكون الاختبار من 15 سؤالًا موزعة على قسمين:<br>
+   - القسم الأول: 3 سؤالًا من نوع الصواب والخطأ.
+  <br> - القسم الثاني: 12 سؤالًا من نوع الاختيار من متعدد.</li>
+
+<li>تُخصص درجة واحدة لكل سؤال، بإجمالي 15 درجة للاختبار كاملًا.</li>
+
+<li>اقرأ كل سؤال بعناية، وتأكد من فهم المطلوب قبل اختيار الإجابة.
+</li>
+
+<li>لا تتسرع في الإجابة، وخذ الوقت الكافي لقراءة السؤال والبدائل.
+</li>
+
+<li>اختار إجابة واحدة فقط من بين البدائل المتاحة لكل سؤال.
+</li>
+
+<li>أجب عن جميع الأسئلة بالترتيب، مع مراعاة الدقة والتركيز.
+</li>
+
+ <li>تأكد من الإجابة عن جميع الأسئلة، وعدم ترك أي سؤال دون إجابة.</li>
+ <li>راجع إجاباتك جيدًا قبل إنهاء الاختبار.</li>
+
+<li>اعتمد على معلوماتك وما تم دراسته في الموديلولات التعليمية في الإجابة، دون الاستعانة بمصادر خارجية.
+</li>
+
+<li>بعد الانتهاء من الإجابة عن جميع الأسئلة، راجع إجاباتك ثم اضغط على زر إرسال الإجابات.
+</li>
+
+
+
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<body>
+<div class="container">
+  <header>
+    <h1>    عزيزي الطالب اقرأ العبارات الآتية جيداً ثم انقر بالماوس على الاجابة الصحيحة من بين الخيارات المتاحة فيما يلي :
+</h1>
+   
+  </header>
+  
+  <form id="quizForm">
+    <section class="question" data-q="1">
+      <p class="q-title"><span class="q-number">السؤال 1:</span> تتميز الرسومات الرقمية التعليمية بالوضوح وسهولة الفهم.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q1" value="true"> ✔️ صحيحة</label>
+        <label class="option"><input type="radio" name="q1" value="false"> ✖️ خاطئة</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="2">
+      <p class="q-title"><span class="q-number">السؤال 2:</span> كل الرسومات الرقمية التعليمية تؤدي دائمًا إلى تحسين التعلم دون أي سلبيات.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q2" value="true"> ✔️ صحيحة</label>
+        <label class="option"><input type="radio" name="q2" value="false"> ✖️ خاطئة</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="3">
+      <p class="q-title"><span class="q-number">السؤال 3:</span> تتضمن الرسومات الرقمية التعليمية الرسوم البيانية والمخططات.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q3" value="true"> ✔️ صحيحة</label>
+        <label class="option"><input type="radio" name="q3" value="false"> ✖️ خاطئة</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="4">
+      <p class="q-title"><span class="q-number">السؤال 4:</span> أي مما يلي يُعد التعريف الأدق للرسومات الرقمية التعليمية؟</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q4" value="a"> أ) رسومات تُستخدم للترفيه فقط</label>
+        <label class="option"><input type="radio" name="q4" value="b"> ب) تمثيلات بصرية تُستخدم لتوضيح المحتوى التعليمي رقميًا</label>
+        <label class="option"><input type="radio" name="q4" value="c"> ج) صور فوتوغرافية عشوائية</label>
+        <label class="option"><input type="radio" name="q4" value="d"> د) نصوص مكتوبة فقط</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="5">
+      <p class="q-title"><span class="q-number">السؤال 5:</span> من خصائص الرسومات الرقمية التعليمية:</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q5" value="a"> أ) التعقيد الشديد</label>
+        <label class="option"><input type="radio" name="q5" value="b"> ب) الاعتماد على النص فقط</label>
+        <label class="option"><input type="radio" name="q5" value="c"> ج) الوضوح والبساطة</label>
+        <label class="option"><input type="radio" name="q5" value="d"> د) عدم التفاعل</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="6">
+      <p class="q-title"><span class="q-number">السؤال 6:</span> وضّح إحدى مميزات الرسومات الرقمية التعليمية.</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q6" value="a"> أ) تقلل الفهم</label>
+        <label class="option"><input type="radio" name="q6" value="b"> ب) تعتمد على الحفظ فقط</label>
+        <label class="option"><input type="radio" name="q6" value="c"> ج) تعقّد المعلومات</label>
+        <label class="option"><input type="radio" name="q6" value="d"> د) تزيد التشويق والفهم السريع</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="7">
+      <p class="q-title"><span class="q-number">السؤال 7:</span> من عيوب الرسومات الرقمية التعليمية:</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q7" value="a"> أ) تحسين التعلم</label>
+        <label class="option"><input type="radio" name="q7" value="b"> ب) زيادة وضوح المحتوى</label>
+        <label class="option"><input type="radio" name="q7" value="c"> ج) إمكانية سوء التصميم أو التشتيت</label>
+        <label class="option"><input type="radio" name="q7" value="d"> د) تسهيل الفهم</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="8">
+      <p class="q-title"><span class="q-number">السؤال 8:</span> أي مما يلي يُعد نوعًا من الرسومات الرقمية التعليمية؟</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q8" value="a"> أ) الرسوم البيانية</label>
+        <label class="option"><input type="radio" name="q8" value="b"> ب) الملفات الصوتية فقط</label>
+        <label class="option"><input type="radio" name="q8" value="c"> ج) القصص النصية فقط</label>
+        <label class="option"><input type="radio" name="q8" value="d"> د) الكتب الورقية</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="9">
+      <p class="q-title"><span class="q-number">السؤال 9:</span> الفرق الأساسي بين الرسومات الرقمية والتقليدية هو:</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q9" value="a"> أ) لا يوجد فرق</label>
+        <label class="option"><input type="radio" name="q9" value="b"> ب) الرقمية تعتمد على الأدوات الإلكترونية</label>
+        <label class="option"><input type="radio" name="q9" value="c"> ج) الرقمية لا تُستخدم في التعليم</label>
+        <label class="option"><input type="radio" name="q9" value="d"> د) التقليدية أسرع دائمًا</label>
+      </div>
+    </section>
+
+    <section class="question" data-q="10">
+      <p class="q-title"><span class="q-number">السؤال 10:</span> متى يكون من المناسب اعتماد المنتج النهائي للرسمة الرقمية التعليمية؟</p>
+      <div class="options">
+        <label class="option"><input type="radio" name="q10" value="a"> أ) قبل التحقق من تحقيق معايير الجودة</label>
+        <label class="option"><input type="radio" name="q10" value="b"> ب) بعد التأكد من استيفائه للمعايير المطلوبة وتحقيقه للهدف التعليمي</label>
+        <label class="option"><input type="radio" name="q10" value="c"> ج) بمجرد الانتهاء من إضافة الألوان</label>
+        <label class="option"><input type="radio" name="q10" value="d"> د) بمجرد حفظ التصميم للمرة الأولى</label>
+      </div>
+    </section>
+    
+<section class="question" data-q="11">
+  <p class="q-title"><span class="q-number">السؤال 11:</span> يعد المفهوم الدقيق للرسومات الرقمية التعليمية...</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q11" value="a"> أ) تمثيلات بصرية رقمية تعليمية.</label>
+    <label class="option"><input type="radio" name="q11" value="b"> ب) صور فوتوغرافية رقمية توثيقية.</label>
+    <label class="option"><input type="radio" name="q11" value="c"> ج) نصوص إلكترونية تعليمية منظمة.</label>
+    <label class="option"><input type="radio" name="q11" value="d"> د) تسجيلات مرئية تعليمية رقمية.</label>
+  </div>
+</section>
+
+<section class="question" data-q="12">
+  <p class="q-title"><span class="q-number">السؤال 12:</span> تعد الخاصية المميزة للرسومات الرقمية التعليمية.....</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q12" value="a"> أ) الرسم باستخدام الأدوات اليدوية.</label>
+    <label class="option"><input type="radio" name="q12" value="b"> ب) المعالجة باستخدام البرامج الرقمية.</label>
+    <label class="option"><input type="radio" name="q12" value="c"> ج) الطباعة باستخدام الأجهزة التقليدية.</label>
+    <label class="option"><input type="radio" name="q12" value="d"> د) العرض باستخدام اللوحات التعليمية.</label>
+  </div>
+</section>
+
+<section class="question" data-q="13">
+  <p class="q-title"><span class="q-number">السؤال 13:</span> يعد المعيار المحقق لوضوح الرسومات الرقمية التعليمية...</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q13" value="a"> أ) تنظيم العناصر البصرية بوضوح.</label>
+    <label class="option"><input type="radio" name="q13" value="b"> ب) تكثيف التفاصيل البصرية باستمرار.</label>
+    <label class="option"><input type="radio" name="q13" value="c"> ج) تنويع المؤثرات الحركية عشوائيًا.</label>
+    <label class="option"><input type="radio" name="q13" value="d"> د) تداخل الأشكال البصرية باستمرار.</label>
+  </div>
+</section>
+
+<section class="question" data-q="14">
+  <p class="q-title"><span class="q-number">السؤال 14:</span> تحدد الوظيفة التعليمية للرسومات الرقمية التعليمية.</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q14" value="a"> أ) تقليل الوسائط المتعددة.</label>
+    <label class="option"><input type="radio" name="q14" value="b"> ب) زيادة المعلومات النصية.</label>
+    <label class="option"><input type="radio" name="q14" value="c"> ج) استبدال الأنشطة التطبيقية.</label>
+    <label class="option"><input type="radio" name="q14" value="d"> د) تبسيط المفاهيم المجردة.</label>
+  </div>
+</section>
+
+<section class="question" data-q="15">
+  <p class="q-title"><span class="q-number">السؤال 15:</span> يعد النوع المستخدم لتنظيم البيانات بصريًا......</p>
+  <div class="options">
+    <label class="option"><input type="radio" name="q15" value="a"> أ) الإنفوجرافيك التعليمي الرقمي.</label>
+    <label class="option"><input type="radio" name="q15" value="b"> ب) التصوير الفوتوغرافي التعليمي.</label>
+    <label class="option"><input type="radio" name="q15" value="c"> ج) الرسم التوضيحي التعليمي.</label>
+    <label class="option"><input type="radio" name="q15" value="d"> د) التحريك الرقمي التعليمي.</label>
+  </div>
+</section>
+
+    <div class="actions">
+      <button id="submitBtn" type="submit">إنهاء الاختبار وعرض النتيجة</button>
+    
+    </div>
+  </form>
+
+  <section id="result" aria-live="polite">
+    <h2>نتيجة الاختبار</h2>
+    <p class="score" id="scoreText"></p>
+    <p id="summaryText"></p>
+    <p>تم احتساب الدرجة النهائية بناءً على إجاباتك.</p>
+    <div class="module-access">
+      <div id="moduleStatus">يتم تفعيل الموديول الثاني عند الحصول على أكثر من 85% من الدرجة النهائية.</div>
+      <button id="moduleTwoBtn" class="module-button" type="button" disabled>الانتقال إلى الموديول الثاني</button>
+      
+    </div>
+  </section>
+</div>
+
+<script>
+  // مفاتيح الإجابة مستندة إلى العلامات الموجودة في الملف والأسئلة الواضحة فيه.
+  const answerKey = {
+    q1: { value: "true", text: "✔️ صحيحة" },
+    q2: { value: "false", text: "✖️ خاطئة" },
+    q3: { value: "true", text: "✔️ صحيحة" },
+    q4: { value: "b", text: "ب) تمثيلات بصرية تُستخدم لتوضيح المحتوى التعليمي رقميًا" },
+    q5: { value: "c", text: "ج) الوضوح والبساطة" },
+    q6: { value: "d", text: "د) تزيد التشويق والفهم السريع" },
+    q7: { value: "c", text: "ج) إمكانية سوء التصميم أو التشتيت" },
+    q8: { value: "a", text: "أ) الرسوم البيانية" },
+    q9: { value: "b", text: "ب) الرقمية تعتمد على الأدوات الإلكترونية" },
+    q10: { value: "b", text: "ب) بعد التأكد من استيفائه للمعايير المطلوبة وتحقيقه للهدف التعليمي" },
+    q11: { value: "a", text: "أ) تمثيلات بصرية رقمية تعليمية. " },
+    q12: { value: "b", text: "ب) المعالجة باستخدام البرامج الرقمية" },
+    q13: { value: "a", text: "أ) تنظيم العناصر البصرية بوضوح. "},
+    q14: { value: "d", text: "د) تبسيط المفاهيم المجردة." },
+    q15: { value: "a", text: "أ) الإنفوجرافيك التعليمي الرقمي. " },
+
+
+  };
+
+  const form = document.getElementById("quizForm");
+  const result = document.getElementById("result");
+  const total = Object.keys(answerKey).length;
+  let submitted = false;
+
+  document.getElementById("moduleTwoBtn").addEventListener("click", function() {
+    if (!this.disabled) {
+      window.location.href = "./module2.html";
+    }
+  });
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (submitted) return;
+
+    let score = 0;
+    let answered = 0;
+
+    Object.entries(answerKey).forEach(([name, correct]) => {
+      const question = document.querySelector(`.question[data-q="${name.slice(1)}"]`);
+      const chosen = form.querySelector(`input[name="${name}"]:checked`);
+      question.querySelector(".feedback")?.remove();
+
+      if (chosen) {
+        answered++;
+        if (chosen.value === correct.value) {
+          score++;
+        }
+      }
+
+      // لا يتم عرض صحة/خطأ إجابة الطالب ولا الإجابة النموذجية تحت السؤال.
+    });
+
+    document.getElementById("scoreText").textContent = `درجتك: ${score} من ${total}`;
+    document.getElementById("summaryText").textContent = `أجبت عن ${answered} من ${total} أسئلة. كل سؤال بدرجة واحدة.`;
+
+    // يتفعّل الموديول الثاني فقط إذا تجاوزت النتيجة 85%، ولا يتفعّل عند 85% بالضبط.
+    const percentage = (score / total) * 100;
+    const moduleTwoBtn = document.getElementById("moduleTwoBtn");
+    const moduleStatus = document.getElementById("moduleStatus");
+    if (percentage > 85) {
+      moduleTwoBtn.disabled = false;
+      moduleStatus.className = "status-pass";
+      moduleStatus.textContent = `ممتاز! حصلت على ${percentage}%، لذلك تم تفعيل زر الموديول الثاني.`;
+    } else {
+      moduleTwoBtn.disabled = true;
+      moduleStatus.className = "status-fail";
+      moduleStatus.textContent = `حصلت على ${percentage}%. يجب أن تتجاوز 85% لتفعيل زر الموديول الثاني. أعد المحاولة لتحسين درجتك.`;
+    }
+
+    result.style.display = "block";
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    form.querySelectorAll("input").forEach(input => input.disabled = true);
+    document.getElementById("submitBtn").disabled = true;
+    submitted = true;
+  });
+
+  form.addEventListener("reset", function() {
+    setTimeout(() => {
+      form.querySelectorAll(".feedback").forEach(item => item.remove());
+      form.querySelectorAll("input").forEach(input => input.disabled = false);
+      document.getElementById("submitBtn").disabled = false;
+      result.style.display = "none";
+      const moduleTwoBtn = document.getElementById("moduleTwoBtn");
+      moduleTwoBtn.disabled = true;
+      const moduleStatus = document.getElementById("moduleStatus");
+      moduleStatus.className = "";
+      moduleStatus.textContent = "يتم تفعيل الموديول الثاني عند الحصول على أكثر من 85% من الدرجة النهائية.";
+      submitted = false;
+    }, 0);
+  });
+</script>
+
+
+
+
+
+<div class="buttons">
+
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+
