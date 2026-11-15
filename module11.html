@@ -350,7 +350,6 @@ Nada Yasser
 </h2>
 
 
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <div class="pdf-container">
@@ -361,31 +360,26 @@ Nada Yasser
        📄 فتح محتوى الموديول الأول
     </a>
 
-    <div class="pdf-viewer">
-        <iframe
-            src="assets/pdf/الموديول%20الاول.pdf#toolbar=1&navpanes=0&view=FitH"
-            title="ملف الموديول الأول"
-            loading="lazy">
-        </iframe>
-    </div>
+    <iframe
+       src="https://docs.google.com/gview?embedded=1&url=https%3A%2F%2Fnadayasserelsayed-lgtm.github.io%2Fassets%2Fpdf%2F%D8%A7%D9%84%D9%85%D9%88%D8%AF%D9%8A%D9%88%D9%84%20%D8%A7%D9%84%D8%A7%D9%88%D9%84.pdf"
+       width="100%"
+       height="750"
+       style="border:none;">
+    </iframe>
 
 </div>
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 .pdf-container {
     width: 100%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .pdf-link {
     display: block;
-    width: 100%;
     text-align: center;
     background: #176b87;
     color: white;
@@ -397,41 +391,24 @@ Nada Yasser
     font-weight: bold;
 }
 
-.pdf-viewer {
+.pdf-container iframe {
     width: 100%;
     height: 85vh;
     min-height: 500px;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f5f5f5;
-}
-
-.pdf-viewer iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
     border: none;
 }
 
-@media screen and (max-width: 768px) {
-    .pdf-container {
-        padding: 5px;
+@media (max-width: 600px) {
+    .pdf-container iframe {
+        height: 75vh;
+        min-height: 450px;
     }
 
     .pdf-link {
         font-size: 16px;
-        padding: 13px;
-    }
-
-    .pdf-viewer {
-        height: 75vh;
-        min-height: 450px;
     }
 }
 </style>
-
-
 
 
 
