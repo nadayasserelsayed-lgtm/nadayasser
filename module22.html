@@ -352,8 +352,6 @@ Nada Yasser
 
 </h2>
 
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <div class="pdf-container">
@@ -364,31 +362,25 @@ Nada Yasser
        📄 فتح محتوى الموديول الثاني
     </a>
 
-    <div class="pdf-viewer">
-        <iframe
-            src="assets/pdf/الموديول%20الثاني.pdf#toolbar=1&navpanes=0&view=FitH"
-            title="ملف الموديول الثاني"
-            loading="lazy">
-        </iframe>
-    </div>
-
+    <iframe
+       src="assets/pdf/الموديول%20الثاني.pdf"
+       width="100%"
+       height="750px"
+       style="border: none;">
+    </iframe>
 </div>
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 .pdf-container {
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: auto;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .pdf-link {
     display: block;
-    width: 100%;
     text-align: center;
     background: #176b87;
     color: white;
@@ -397,44 +389,19 @@ Nada Yasser
     border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
 }
 
-.pdf-viewer {
+iframe {
     width: 100%;
-    height: 85vh;
-    min-height: 500px;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f5f5f5;
+    min-height: 25000px;
 }
 
-.pdf-viewer iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media screen and (max-width: 768px) {
-    .pdf-container {
-        padding: 5px;
-    }
-
-    .pdf-link {
-        font-size: 16px;
-        padding: 13px;
-    }
-
-    .pdf-viewer {
-        height: 75vh;
-        min-height: 450px;
+@media (max-width: 600px) {
+    iframe {
+            height: 5350vh;
     }
 }
-</style>
-
-
+</style> 
 </div>
 
 <br><br>
