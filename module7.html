@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الموديول السابع</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#EEF4FB;
+}
+
+header{
+background:#071A35;
+color:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-circle{
+width:55px;
+height:55px;
+background:#D4AF37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:24px;
+font-weight:bold;
+color:#071A35;
+}
+
+.platform{
+font-size:22px;
+font-weight:bold;
+}
+
+.header-buttons a{
+
+text-decoration:none;
+background:#D4AF37;
+color:#071A35;
+padding:10px 18px;
+margin-right:10px;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.header-buttons a:hover{
+
+background:white;
+
+}
+
+.container{
+
+width:90%;
+margin:35px auto;
+
+}
+
+.card{
+
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.card h2{
+
+text-align:center;
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.card p{
+
+font-size:18px;
+line-height:2;
+
+}
+
+.objectives{
+
+padding-right:20px;
+
+}
+
+.objectives li{
+
+margin-bottom:15px;
+font-size:18px;
+
+}
+
+.content-box{
+
+background:#F8FAFD;
+border:2px dashed #D4AF37;
+padding:30px;
+border-radius:15px;
+text-align:center;
+
+}
+
+.content-box h3{
+
+color:#071A35;
+margin-bottom:20px;
+
+}
+
+.content-box p{
+
+line-height:2;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:20px;
+background:#071A35;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:10px;
+
+}
+
+.button:hover{
+
+background:#38BDF8;
+color:#071A35;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:space-between;
+margin-top:30px;
+
+}
+
+footer{
+
+margin-top:50px;
+background:#071A35;
+color:white;
+text-align:center;
+padding:20px;
+
+}
+
+  :root { --primary:#2457a7; --light:#eef4ff; --border:#d8e0ee; --text:#202938; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Tahoma, Arial, sans-serif; background:#f4f7fb; color:var(--text); line-height:1.8; }
+  .container { width:min(960px, 94%); margin:28px auto; }
+  header { background:linear-gradient(135deg,#2457a7,#4778c7); color:white; padding:26px 24px; border-radius:18px; box-shadow:0 8px 22px #1d3d701c; }
+  header h1 { margin:0 0 8px; font-size:clamp(23px,4vw,32px); }
+  header p { margin:0; opacity:.95; }
+  .instructions { margin:18px 0; background:white; border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+  .question { background:white; border:1px solid var(--border); border-radius:15px; padding:20px; margin:16px 0; box-shadow:0 3px 10px #243b5308; }
+  .q-title { font-weight:700; margin:0 0 14px; font-size:18px; }
+  .q-number { color:var(--primary); margin-left:7px; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .option { display:flex; align-items:flex-start; gap:9px; border:1px solid var(--border); padding:11px 13px; border-radius:10px; cursor:pointer; background:#fff; transition:.15s; }
+  .option:hover { background:var(--light); border-color:#91addb; }
+  .option input { margin-top:7px; accent-color:var(--primary); flex-shrink:0; }
+  .option:has(input:checked) { border-color:var(--primary); background:var(--light); }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+  button { border:0; border-radius:10px; padding:13px 22px; font-size:16px; font-weight:bold; cursor:pointer; }
+  #submitBtn { background:var(--primary); color:white; }
+  #resetBtn { background:#e5eaf2; color:#27364b; }
+  button:hover { filter:brightness(.96); }
+  #result { display:none; background:white; border:2px solid var(--primary); border-radius:16px; padding:22px; margin:20px 0 35px; }
+  #result h2 { margin-top:0; }
+  .score { font-size:25px; font-weight:bold; color:var(--primary); }
+  .module-access { margin-top:18px; padding:16px; border-radius:12px; background:#f4f7fb; border:1px solid var(--border); }
+  .module-button { display:inline-block; text-decoration:none; margin-top:8px; background:#17834a; color:#fff; }
+  .module-button:disabled { background:#aab3c1; color:#f7f8fa; cursor:not-allowed; opacity:.85; }
+  .status-pass { color:#17834a; font-weight:bold; }
+  .status-fail { color:#b42318; font-weight:bold; }
+  @media (max-width:620px) { .options { grid-template-columns:1fr; } .question { padding:15px; } }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-circle">
+
+NY
+
+</div>
+
+<div class="platform">
+
+Nada Yasser 
+
+</div>
+
+</div>
+
+<div class="header-buttons">
+
+<a href="home.html">
+
+الرئيسية
+
+</a>
+
+<a href="login.html">
+
+تسجيل الخروج
+
+</a>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>
+
+الموديول السابع
+
+</h2>
+
+<p style="text-align:center;font-size:22px;font-weight:bold;">
+المشروع النهائي </p>
+
+</div>
+
+
+<div class="card">
+
+    <h2 style="text-align: right; direction: rtl; margin: 0;">
+
+عزيزي الدارس طبق ما تعلمته في دراسة الموديولات السابقة في إنتاج مشروع نهائي لانتاج الرسومات الرقمية التعليمية والثقافة البصرية وذلك وفق التعليمات التالية : </h2>
+
+<ul class="objectives">
+        <li> موضوع المشروع رسمة رقمية تعليمية تشرح مكونات الجهاز الهضمي </li>
+
+<li>  مواصفات الرسمة : <br>
+    أولًا: المواصفات التربوية والتعليمية<br>1. تحديد الهدف التعليمي: توضيح مكونات الجهاز الهضمي وأجزاء كل مكون ووظيفة كل منها.<br>
+2. الدقة العلمية: عرض أعضاء الجهاز الهضمي بصورة تشريحية صحيحة، مع كتابة المسميات العلمية بدقة.<br>
+3. ملاءمة المحتوى للمتعلمين: استخدام معلومات ومصطلحات تتناسب مع المستوى المعرفي والعُمري للفئة المستهدفة.<br>
+4. وضوح الرسالة التعليمية: التركيز على توضيح مسار الطعام داخل الجهاز الهضمي منذ دخوله الفم حتى خروجه عبر فتحة الشرج.<br>
+5. التنظيم المنطقي للمعلومات: ترتيب الأعضاء وفق تسلسل مرور الطعام داخل الجهاز الهضمي.<br>
+6. الترابط بين العناصر: توضيح العلاقة بين أعضاء الجهاز الهضمي والأعضاء المساعدة في عملية الهضم.<br>
+7. التبسيط التعليمي: تجنب التفاصيل التشريحية المعقدة التي لا تخدم الهدف التعليمي.<br>
+8. دعم التعلم البصري: توظيف الصور والرموز والأسهم لتسهيل فهم تركيب الجهاز الهضمي ووظائفه.<br>
+ثانيًا: المواصفات الفنية والتكنولوجية<br>
+1. التوازن البصري: توزيع مكونات الجهاز الهضمي والمسميات بصورة متوازنة داخل مساحة التصميم.<br>
+2. التباين اللوني: استخدام ألوان متباينة تساعد على التمييز بين أعضاء الجهاز الهضمي.<br>
+3. التناسق اللوني: اختيار مجموعة ألوان متوافقة ومريحة للعين.<br>
+4. وضوح الخطوط: استخدام خطوط واضحة ومقروءة في كتابة أسماء الأعضاء والمعلومات التوضيحية.<br>
+5. التناسب الحجمي: مراعاة التناسب بين حجم الأعضاء والرموز والنصوص المستخدمة.<br>
+6. جودة الصور: استخدام رسومات تشريحية عالية الدقة وخالية من التشوهات البصرية.<br>
+7. سهولة القراءة: تجنب تداخل الأسهم والخطوط التوضيحية مع الأعضاء والمسميات.<br>
+8. بساطة التصميم: الابتعاد عن الزخارف والمؤثرات التي لا ترتبط بالمحتوى التعليمي.<br>
+9. التناسق الشكلي: توحيد أسلوب رسم الأعضاء والرموز المستخدمة داخل التصميم.<br>
+10. جودة الإخراج: حفظ الرسمة بصيغة مناسبة مثل PNG أو JPEG مع الحفاظ على وضوح التفاصيل.<br>
+ثالثًا: مواصفات الثقافة البصرية<br>
+1. الإدراك البصري: تمييز أعضاء الجهاز الهضمي والتعرف على أشكالها ومواقعها داخل الجسم.<br>
+2. القراءة البصرية: قراءة المسميات والرموز والأسهم وفهم دلالاتها داخل الرسمة.<br>
+3. التفكير البصري: استنتاج العلاقة بين شكل العضو ووظيفته في عملية الهضم.<br>
+4. الاتصال البصري: توصيل المعلومات العلمية من خلال الصور والألوان والرموز بصورة واضحة.<br>
+5. التصميم البصري: توظيف عناصر التصميم ومبادئه لإنتاج رسمة متكاملة ومنظمة.<br>
+6. التقييم البصري: الحكم على دقة الرسمة ووضوحها وتناسق عناصرها ومدى ملاءمتها للهدف التعليمي.<br>
+
+
+
+        <li> مدة الانتهاء من المشروع ثلاثة أيام  </li>
+
+                <li> إحرص على تدوين اسمك ورقمك في المشروع </li>
+                        <li> يتم تسليم المشروع من خلال إرساله عبر الواتس 
+                            <a href="https://wa.me/20XXXXXXXXXX" target="_blank" class="whatsapp-contact">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="واتساب">
+    <span>للتواصل </span>
+</a>
+
+<style>
+.whatsapp-contact{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#16804a;
+    text-decoration:none;
+    font-family:Tahoma,Arial,sans-serif;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.whatsapp-contact img{
+    width:24px;
+    height:24px;
+}
+</style> </li>
+                                <li> في حالة وجود اي إستفسارات يرجى التواصل مع الباحثة لتقديم الدعم اللازم  </li>
+
+
+
+
+</li>
+
+
+</ul>
+
+</div>
+
+<div class="card">
+
+
+<body>
+
+
+<div class="buttons">
+
+    
+<a href="posttest.html" class="button">
+
+➡️ الإختبار البعدي العام 
+
+</a>
+
+<a href="home.html" class="button">
+
+🏠 العودة للرئيسية
+
+</a>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 Nada Yasser 
+
+</p>
+
+
+</footer>
+
+</body>
+
+</html>
+

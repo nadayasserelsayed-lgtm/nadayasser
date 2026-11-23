@@ -334,9 +334,11 @@ Nada Yasser
  
 <style>
 :root{--navy:#17365d;--blue:#2f75b5;--pale:#eef5fc;--green:#16804a;--red:#c0392b;--ink:#243247}
-*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+*{box-sizing:border-box}
+body{margin:0;background:#f3f6fa;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
 header{background:linear-gradient(120deg,#17365d,#2f75b5);color:#fff;padding:26px 16px;text-align:center}
-header h1{font-size:clamp(1.2rem,4vw,1.8rem);margin:0 0 8px}header p{margin:0}
+header h1{font-size:clamp(1.2rem,4vw,1.8rem);margin:0 0 8px}
+header p{margin:0}
 main{max-width:950px;margin:20px auto;padding:0 12px 36px}
 .info{background:#fff;border:1px solid #dce5ef;border-radius:14px;padding:14px 18px;margin-bottom:16px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
 .question{background:#fff;border:1px solid #dce5ef;border-radius:14px;padding:18px;margin:14px 0;box-shadow:0 3px 12px #18365d0b}
@@ -351,75 +353,255 @@ input{accent-color:var(--blue);margin-top:7px;flex-shrink:0}
 .feedback.wrong{display:block;background:#fff0ee;color:#9f2b22}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
 button{border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:bold;cursor:pointer}
-#submit{background:var(--navy);color:#fff}#reset{background:#e4eaf1;color:#243247}
-#next{background:var(--green);color:#fff}#next:disabled{background:#aeb8c4;color:#fff;cursor:not-allowed;opacity:.8}
+#submit{background:var(--navy);color:#fff}
+#reset{background:#e4eaf1;color:#243247}
+#next{background:var(--green);color:#fff}
+#next:disabled{background:#aeb8c4;color:#fff;cursor:not-allowed;opacity:.8}
 #result{display:none;background:#fff;border:2px solid var(--blue);border-radius:14px;padding:20px;text-align:center;margin:18px 0}
 #score{font-size:2rem;color:var(--navy);font-weight:bold}
 .note{font-size:.92rem;color:#53657b}
-@media(max-width:620px){.options{grid-template-columns:1fr}.question{padding:14px}.info{display:block}}
+@media(max-width:620px){
+.options{grid-template-columns:1fr}
+.question{padding:14px}
+.info{display:block}
+}
 </style>
+
 </head>
 <body>
 <main>
 <form id="quiz">
+
 <section class="question" data-answer="صحيحة" data-correct="صحيحة">
 <div class="qhead"><span class="num">1</span><span>يُعد فحص تراخيص الصور والعناصر المستخدمة في الرسومات الرقمية التعليمية إجراءً ضروريًا للتحقق من مشروعية استخدامها.</span></div>
-<div class="options"><label class="option"><input type="radio" name="q1" value="صحيحة"> صحيحة (✔)</label><label class="option"><input type="radio" name="q1" value="خاطئة"> خاطئة (×)</label></div><div class="feedback"></div></section>
+<div class="options">
+<label class="option"><input type="radio" name="q1" value="صحيحة"> صحيحة (✔)</label>
+<label class="option"><input type="radio" name="q1" value="خاطئة"> خاطئة (×)</label>
+</div>
+<div class="feedback"></div>
+</section>
+
 <section class="question" data-answer="صحيحة" data-correct="صحيحة">
 <div class="qhead"><span class="num">2</span><span>لا يقتصر تقويم الرسومات الرقمية التعليمية على الجانب الجمالي، بل يشمل مدى توافقها مع المعايير الأخلاقية والسلامة.</span></div>
-<div class="options"><label class="option"><input type="radio" name="q2" value="صحيحة"> صحيحة (✔)</label><label class="option"><input type="radio" name="q2" value="خاطئة"> خاطئة (×)</label></div><div class="feedback"></div></section>
+<div class="options">
+<label class="option"><input type="radio" name="q2" value="صحيحة"> صحيحة (✔)</label>
+<label class="option"><input type="radio" name="q2" value="خاطئة"> خاطئة (×)</label>
+</div>
+<div class="feedback"></div>
+</section>
+
 <section class="question" data-answer="صحيحة" data-correct="صحيحة">
 <div class="qhead"><span class="num">3</span><span>تتطلب الدقة العلمية في الرسومات الرقمية التعليمية التأكد من صحة المعلومات والبيانات المقدمة للمتعلم.</span></div>
-<div class="options"><label class="option"><input type="radio" name="q3" value="صحيحة"> صحيحة (✔)</label><label class="option"><input type="radio" name="q3" value="خاطئة"> خاطئة (×)</label></div><div class="feedback"></div></section>
+<div class="options">
+<label class="option"><input type="radio" name="q3" value="صحيحة"> صحيحة (✔)</label>
+<label class="option"><input type="radio" name="q3" value="خاطئة"> خاطئة (×)</label>
+</div>
+<div class="feedback"></div>
+</section>
+
 <section class="question" data-answer="خاطئة" data-correct="خاطئة">
 <div class="qhead"><span class="num">4</span><span>يُعد وضوح الرسالة التعليمية من المؤشرات غير الهامة عند تقويم فاعلية الرسم الرقمي التعليمي.</span></div>
-<div class="options"><label class="option"><input type="radio" name="q4" value="صحيحة"> صحيحة (✔)</label><label class="option"><input type="radio" name="q4" value="خاطئة"> خاطئة (×)</label></div><div class="feedback"></div></section>
+<div class="options">
+<label class="option"><input type="radio" name="q4" value="صحيحة"> صحيحة (✔)</label>
+<label class="option"><input type="radio" name="q4" value="خاطئة"> خاطئة (×)</label>
+</div>
+<div class="feedback"></div>
+</section>
+
 <section class="question" data-answer="صحيحة" data-correct="صحيحة">
 <div class="qhead"><span class="num">5</span><span>تتحقق الجاذبية البصرية في الرسومات الرقمية التعليمية من خلال الاستخدام المتوازن للألوان والتنسيقات.</span></div>
-<div class="options"><label class="option"><input type="radio" name="q5" value="صحيحة"> صحيحة (✔)</label><label class="option"><input type="radio" name="q5" value="خاطئة"> خاطئة (×)</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">6</span><span>عند استخدام محتوى أو عنصر بصري مقتبس من عمل لمؤلف آخر، ما الإجراء الذي يعكس الالتزام بحقوق الملكية الفكرية؟</span></div><div class="options"><label class="option"><input type="radio" name="q6" value="أ"> أ) حذف اسم المؤلف الأصلي عند الاقتباس.</label><label class="option"><input type="radio" name="q6" value="ب"> ب) الإشارة إلى المؤلف الأصلي عند الاقتباس.</label><label class="option"><input type="radio" name="q6" value="ج"> ج) إعادة نشر العمل دون أي توثيق.</label><label class="option"><input type="radio" name="q6" value="د"> د) تغيير عنوان العمل فقط.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">7</span><span>أي مما يأتي يمثل الإجراء الأنسب للحكم على توافق رسمة رقمية تعليمية مع المعايير الأخلاقية والسلامة؟</span></div><div class="options"><label class="option"><input type="radio" name="q7" value="أ"> أ) التركيز على جمال التصميم فقط.</label><label class="option"><input type="radio" name="q7" value="ب"> ب) التحقق من خلو المحتوى من العناصر المخالفة للمعايير الأخلاقية.</label><label class="option"><input type="radio" name="q7" value="ج"> ج) زيادة عدد الصور المستخدمة.</label><label class="option"><input type="radio" name="q7" value="د"> د) استخدام أكبر حجم ممكن للتصميم.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="د" data-correct="د"><div class="qhead"><span class="num">8</span><span>ما الإجراء الأكثر دقة عند تقييم الدقة العلمية لرسمة رقمية تعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q8" value="أ"> أ) تقليل حجم النصوص.</label><label class="option"><input type="radio" name="q8" value="ب"> ب) الاعتماد على جودة الألوان فقط.</label><label class="option"><input type="radio" name="q8" value="ج"> ج) زيادة عدد العناصر البصرية.</label><label class="option"><input type="radio" name="q8" value="د"> د) التحقق من صحة المعلومات والبيانات الواردة في الرسم.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="د" data-correct="د"><div class="qhead"><span class="num">9</span><span>عند تقويم جودة رسمة رقمية تعليمية، ما الإجراء الأكثر شمولًا؟</span></div><div class="options"><label class="option"><input type="radio" name="q9" value="أ"> أ) تقويم حجم الملف دون النظر إلى محتواه.</label><label class="option"><input type="radio" name="q9" value="ب"> ب) التركيز على لون الخلفية فقط.</label><label class="option"><input type="radio" name="q9" value="ج"> ج) حساب عدد الصور المستخدمة فقط.</label><label class="option"><input type="radio" name="q9" value="د"> د) تقويم جودة المنتج النهائي ومدى استيفائه لمتطلبات التصميم التعليمي.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">10</span><span>ما المعيار الذي يستخدم للحكم على وضوح الرسالة التعليمية في الرسمة الرقمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q10" value="أ"> أ) عدد الخطوط المستخدمة.</label><label class="option"><input type="radio" name="q10" value="ب"> ب) مدى سهولة فهم المتعلم للرسالة المقصودة من الرسم.</label><label class="option"><input type="radio" name="q10" value="ج"> ج) عدد المؤثرات البصرية.</label><label class="option"><input type="radio" name="q10" value="د"> د) حجم مساحة العمل فقط.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">11</span><span>ما الذي يعكس تحقق الجاذبية البصرية في الرسمة الرقمية التعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q11" value="أ"> أ) استخدام أكبر عدد ممكن من الألوان.</label><label class="option"><input type="radio" name="q11" value="ب"> ب) استخدام الألوان والتنسيقات بصورة متوازنة وجاذبة.</label><label class="option"><input type="radio" name="q11" value="ج"> ج) استخدام لون واحد في جميع العناصر.</label><label class="option"><input type="radio" name="q11" value="د"> د) زيادة المؤثرات البصرية بغض النظر عن المحتوى.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="د" data-correct="د"><div class="qhead"><span class="num">12</span><span>أي الممارسات الآتية تعكس تحقق معيار البساطة في الرسمة الرقمية التعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q12" value="أ"> أ) إضافة أكبر عدد ممكن من العناصر.</label><label class="option"><input type="radio" name="q12" value="ب"> ب) استخدام مؤثرات متعددة في جميع أجزاء التصميم.</label><label class="option"><input type="radio" name="q12" value="ج"> ج) استخدام نصوص طويلة في كل عنصر.</label><label class="option"><input type="radio" name="q12" value="د"> د) تجنب العناصر والتفاصيل التي لا تخدم الهدف التعليمي.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">13</span><span>عند تقويم مدى ملاءمة رسومات رقمية تعليمية للفئة المستهدفة، ما العامل الأكثر أهمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q13" value="أ"> أ) زيادة عدد الألوان المستخدمة.</label><label class="option"><input type="radio" name="q13" value="ب"> ب) توافق محتوى الرسومات الرقمية مع خصائص الفئة المستهدفة.</label><label class="option"><input type="radio" name="q13" value="ج"> ج) استخدام أكبر حجم ممكن للصور.</label><label class="option"><input type="radio" name="q13" value="د"> د) إضافة أكبر عدد من النصوص.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">14</span><span>إذا أظهر تقويم الرسمة الرقمية التعليمية وجود جوانب تحد من تحقيق الهدف التعليمي، فما الإجراء المهني الأنسب؟</span></div><div class="options"><label class="option"><input type="radio" name="q14" value="أ"> أ) الإبقاء على التصميم دون تعديل.</label><label class="option"><input type="radio" name="q14" value="ب"> ب) تطوير التصميم وتعديله بما يعزز تحقيق الأهداف التعليمية.</label><label class="option"><input type="radio" name="q14" value="ج"> ج) حذف الهدف التعليمي.</label><label class="option"><input type="radio" name="q14" value="د"> د) زيادة عدد العناصر البصرية عشوائيًا.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="د" data-correct="د"><div class="qhead"><span class="num">15</span><span>ما الهدف الرئيس من اقتراح التحسينات بعد تقويم الرسمة الرقمية التعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q15" value="أ"> أ) التركيز على الجانب الجمالي فقط.</label><label class="option"><input type="radio" name="q15" value="ب"> ب) زيادة عدد عناصر التصميم فقط.</label><label class="option"><input type="radio" name="q15" value="ج"> ج) تغيير التصميم بالكامل دون تقويم.</label><label class="option"><input type="radio" name="q15" value="د"> د) تحديد جوانب القوة والضعف والجوانب المراد تحسينها.</label></div><div class="feedback"></div></section>
-<section class="question" data-answer="ب" data-correct="ب"><div class="qhead"><span class="num">16</span><span>متى يكون من المناسب اعتماد المنتج النهائي للرسمة الرقمية التعليمية؟</span></div><div class="options"><label class="option"><input type="radio" name="q16" value="أ"> أ) قبل التحقق من تحقيق معايير الجودة.</label><label class="option"><input type="radio" name="q16" value="ب"> ب) بعد التأكد من استيفائه للمعايير المطلوبة وتحقيقه للهدف التعليمي.</label><label class="option"><input type="radio" name="q16" value="ج"> ج) بمجرد الانتهاء من إضافة الألوان.</label><label class="option"><input type="radio" name="q16" value="د"> د) بمجرد حفظ التصميم للمرة الأولى.</label></div><div class="feedback"></div></section>
+<div class="options">
+<label class="option"><input type="radio" name="q5" value="صحيحة"> صحيحة (✔)</label>
+<label class="option"><input type="radio" name="q5" value="خاطئة"> خاطئة (×)</label>
+</div>
+<div class="feedback"></div>
+</section>
 
-<div class="actions"><button id="submit" type="button">إنهاء الاختبار وعرض الدرجة</button><button id="next" type="button" disabled>الانتقال إلى الاختبار البعدي العام</button></div>
-</form><div id="result" aria-live="polite"><div>درجتك النهائية</div><div id="score">0 / 16</div><div id="summary"></div></div>
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">6</span><span>عند استخدام محتوى أو عنصر بصري مقتبس من عمل لمؤلف آخر، ما الإجراء الذي يعكس الالتزام بحقوق الملكية الفكرية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q6" value="أ"> أ) حذف اسم المؤلف الأصلي عند الاقتباس.</label>
+<label class="option"><input type="radio" name="q6" value="ب"> ب) الإشارة إلى المؤلف الأصلي عند الاقتباس.</label>
+<label class="option"><input type="radio" name="q6" value="ج"> ج) إعادة نشر العمل دون أي توثيق.</label>
+<label class="option"><input type="radio" name="q6" value="د"> د) تغيير عنوان العمل فقط.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">7</span><span>أي مما يأتي يمثل الإجراء الأنسب للحكم على توافق رسمة رقمية تعليمية مع المعايير الأخلاقية والسلامة؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q7" value="أ"> أ) التركيز على جمال التصميم فقط.</label>
+<label class="option"><input type="radio" name="q7" value="ب"> ب) التحقق من خلو المحتوى من العناصر المخالفة للمعايير الأخلاقية.</label>
+<label class="option"><input type="radio" name="q7" value="ج"> ج) زيادة عدد الصور المستخدمة.</label>
+<label class="option"><input type="radio" name="q7" value="د"> د) استخدام أكبر حجم ممكن للتصميم.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="د" data-correct="د">
+<div class="qhead"><span class="num">8</span><span>ما الإجراء الأكثر دقة عند تقييم الدقة العلمية لرسمة رقمية تعليمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q8" value="أ"> أ) تقليل حجم النصوص.</label>
+<label class="option"><input type="radio" name="q8" value="ب"> ب) الاعتماد على جودة الألوان فقط.</label>
+<label class="option"><input type="radio" name="q8" value="ج"> ج) زيادة عدد العناصر البصرية.</label>
+<label class="option"><input type="radio" name="q8" value="د"> د) التحقق من صحة المعلومات والبيانات الواردة في الرسم.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="د" data-correct="د">
+<div class="qhead"><span class="num">9</span><span>عند تقويم جودة رسمة رقمية تعليمية، ما الإجراء الأكثر شمولًا؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q9" value="أ"> أ) تقويم حجم الملف دون النظر إلى محتواه.</label>
+<label class="option"><input type="radio" name="q9" value="ب"> ب) التركيز على لون الخلفية فقط.</label>
+<label class="option"><input type="radio" name="q9" value="ج"> ج) حساب عدد الصور المستخدمة فقط.</label>
+<label class="option"><input type="radio" name="q9" value="د"> د) تقويم جودة المنتج النهائي ومدى استيفائه لمتطلبات التصميم التعليمي.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">10</span><span>ما المعيار الذي يستخدم للحكم على وضوح الرسالة التعليمية في الرسمة الرقمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q10" value="أ"> أ) عدد الخطوط المستخدمة.</label>
+<label class="option"><input type="radio" name="q10" value="ب"> ب) مدى سهولة فهم المتعلم للرسالة المقصودة من الرسم.</label>
+<label class="option"><input type="radio" name="q10" value="ج"> ج) عدد المؤثرات البصرية.</label>
+<label class="option"><input type="radio" name="q10" value="د"> د) حجم مساحة العمل فقط.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">11</span><span>ما الذي يعكس تحقق الجاذبية البصرية في الرسمة الرقمية التعليمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q11" value="أ"> أ) استخدام أكبر عدد ممكن من الألوان.</label>
+<label class="option"><input type="radio" name="q11" value="ب"> ب) استخدام الألوان والتنسيقات بصورة متوازنة وجاذبة.</label>
+<label class="option"><input type="radio" name="q11" value="ج"> ج) استخدام لون واحد في جميع العناصر.</label>
+<label class="option"><input type="radio" name="q11" value="د"> د) زيادة المؤثرات البصرية بغض النظر عن المحتوى.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="د" data-correct="د">
+<div class="qhead"><span class="num">12</span><span>أي الممارسات الآتية تعكس تحقق معيار البساطة في الرسمة الرقمية التعليمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q12" value="أ"> أ) إضافة أكبر عدد ممكن من العناصر.</label>
+<label class="option"><input type="radio" name="q12" value="ب"> ب) استخدام مؤثرات متعددة في جميع أجزاء التصميم.</label>
+<label class="option"><input type="radio" name="q12" value="ج"> ج) استخدام نصوص طويلة في كل عنصر.</label>
+<label class="option"><input type="radio" name="q12" value="د"> د) تجنب العناصر والتفاصيل التي لا تخدم الهدف التعليمي.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">13</span><span>عند تقويم مدى ملاءمة رسومات رقمية تعليمية للفئة المستهدفة، ما العامل الأكثر أهمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q13" value="أ"> أ) زيادة عدد الألوان المستخدمة.</label>
+<label class="option"><input type="radio" name="q13" value="ب"> ب) توافق محتوى الرسومات الرقمية مع خصائص الفئة المستهدفة.</label>
+<label class="option"><input type="radio" name="q13" value="ج"> ج) استخدام أكبر حجم ممكن للصور.</label>
+<label class="option"><input type="radio" name="q13" value="د"> د) إضافة أكبر عدد من النصوص.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">14</span><span>إذا أظهر تقويم الرسمة الرقمية التعليمية وجود جوانب تحد من تحقيق الهدف التعليمي، فما الإجراء المهني الأنسب؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q14" value="أ"> أ) الإبقاء على التصميم دون تعديل.</label>
+<label class="option"><input type="radio" name="q14" value="ب"> ب) تطوير التصميم وتعديله بما يعزز تحقيق الأهداف التعليمية.</label>
+<label class="option"><input type="radio" name="q14" value="ج"> ج) حذف الهدف التعليمي.</label>
+<label class="option"><input type="radio" name="q14" value="د"> د) زيادة عدد العناصر البصرية عشوائيًا.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="د" data-correct="د">
+<div class="qhead"><span class="num">15</span><span>ما الهدف الرئيس من اقتراح التحسينات بعد تقويم الرسمة الرقمية التعليمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q15" value="أ"> أ) التركيز على الجانب الجمالي فقط.</label>
+<label class="option"><input type="radio" name="q15" value="ب"> ب) زيادة عدد عناصر التصميم فقط.</label>
+<label class="option"><input type="radio" name="q15" value="ج"> ج) تغيير التصميم بالكامل دون تقويم.</label>
+<label class="option"><input type="radio" name="q15" value="د"> د) تحديد جوانب القوة والضعف والجوانب المراد تحسينها.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<section class="question" data-answer="ب" data-correct="ب">
+<div class="qhead"><span class="num">16</span><span>متى يكون من المناسب اعتماد المنتج النهائي للرسمة الرقمية التعليمية؟</span></div>
+<div class="options">
+<label class="option"><input type="radio" name="q16" value="أ"> أ) قبل التحقق من تحقيق معايير الجودة.</label>
+<label class="option"><input type="radio" name="q16" value="ب"> ب) بعد التأكد من استيفائه للمعايير المطلوبة وتحقيقه للهدف التعليمي.</label>
+<label class="option"><input type="radio" name="q16" value="ج"> ج) بمجرد الانتهاء من إضافة الألوان.</label>
+<label class="option"><input type="radio" name="q16" value="د"> د) بمجرد حفظ التصميم للمرة الأولى.</label>
+</div>
+<div class="feedback"></div>
+</section>
+
+<div class="actions">
+<button id="submit" type="button">إنهاء الاختبار وعرض الدرجة</button>
+<button id="next" type="button" disabled>الانتقال إلى الموديول السابع</button>
+</div>
+
+</form>
+
+<div id="result" aria-live="polite">
+<div>درجتك النهائية</div>
+<div id="score">0 / 16</div>
+<div id="summary"></div>
+</div>
+
 </main>
+
 <script>
 const quiz=document.getElementById('quiz');
 const nextButton=document.getElementById('next');
+
 document.getElementById('submit').addEventListener('click',()=>{
+
  let score=0;
+
  document.querySelectorAll('.question').forEach(card=>{
+
   const selected=card.querySelector('input:checked');
-  if(selected && selected.value===card.dataset.answer) score++;
-  // لا تعرض أي إجابات صحيحة أو خاطئة للطالب
+
+  if(selected && selected.value===card.dataset.answer){
+   score++;
+  }
+
+  // عدم عرض الإجابات الصحيحة أو الخاطئة للطالب
   const fb=card.querySelector('.feedback');
-  if(fb){fb.className='feedback';fb.textContent='';fb.style.display='none';}
+
+  if(fb){
+   fb.className='feedback';
+   fb.textContent='';
+   fb.style.display='none';
+  }
+
  });
+
  document.getElementById('score').textContent=score+' / 16';
  document.getElementById('summary').textContent='';
- nextButton.disabled = (score / 16) <= 0.85;
- const result=document.getElementById('result');result.style.display='block';result.scrollIntoView({behavior:'smooth',block:'center'});
+
+ // تفعيل الزر عند الحصول على أكثر من 85%
+ nextButton.disabled=(score/16)<=0.85;
+
+ const result=document.getElementById('result');
+ result.style.display='block';
+ result.scrollIntoView({behavior:'smooth',block:'center'});
+
 });
+
+// الانتقال إلى الموديول السابع
 nextButton.addEventListener('click',()=>{
- if(!nextButton.disabled) window.location.href='posttest.html';
+ if(!nextButton.disabled){
+  window.location.href='module7.html';
+ }
 });
-document.getElementById('reset').addEventListener('click',()=>{
- setTimeout(()=>{
-  document.querySelectorAll('.feedback').forEach(f=>{f.className='feedback';f.textContent='';f.style.display='none';});
-  document.getElementById('result').style.display='none';
-  nextButton.disabled=true;
- },0);
-});
-</script></body></html>
+
+</script>
+</body>
+</html>
 
 
 
